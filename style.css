@@ -1,0 +1,230 @@
+*{
+	box-sizing: border-box;
+	font-family: "Helvetica Neue", Arial, sans-serif;
+	text-decoration: none;
+	font-size: 14px;
+}
+body{
+	background: url("img/bg/bg.jpg") 105% 10% no-repeat black;
+	
+	opacity: 0.85;
+}
+
+.container{
+	width: 1400px;
+	margin: 0 auto;
+	display: grid;
+	grid-template-areas: "header header"
+						"nav sponsor"
+						"main sponsor"
+						"footer footer";
+	grid-gap: 1px;
+	grid-template-columns: 4fr 2fr;
+	grid-template-rows: 60px 63px auto 100px;
+	}
+
+/*  HEADER */
+header{
+	grid-area: header;
+}
+header {
+	display: flex;
+	justify-content: space-between;
+}
+	.logo, .social-icons{
+		width: 35%;
+	}
+	.social-icons{
+		display: flex;
+		flex-direction: row;
+		justify-content: flex-end;
+	}
+	 .social-icons img{
+		margin: 20px 20px 5px 0;
+		padding: 3px;
+	}
+	.social-icons img:hover{
+		box-shadow: 0 0 15px rgb(58, 58, 58);
+		transition-delay: 0.05s;
+		
+	}
+	
+/* END HEADER */
+
+/* NAVIGATION */
+nav{
+	grid-area: nav;
+	background-color: rgb(255, 255, 255);
+	opacity: 0.98;
+}
+	.nav-menu{
+		display: flex;
+		
+	}
+	.nav-item{
+		margin: 1px;
+		padding: 8px 15px 2px 15px;
+		font-size: 0.8em;
+	}
+	.nav-menu .active,
+	.nav-item:hover{
+		box-shadow: 0 0 10px rgba(0,0,0,0.5);
+		font-weight: 700;
+		transition-delay: 0.09s
+	}
+	.nav-item img{
+		width: 30px;
+	}
+
+/* END NAVIGATION */
+
+/* MAIN */  
+.main{
+	grid-area: main;
+	
+	
+}
+.main h1{
+	color: white;
+	font-size: 1.9em;
+	background-color: #000;
+}
+.main .filters{
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+	background-color: #000;
+}
+	.filters select{
+		margin: 0 55px 15px 0;
+		width: 200px;
+		height: 26px;
+		padding: 0 3px;
+		font-size: 0.85em;
+		font-weight: 550;
+		background: rgb(247, 245, 245);
+	}
+
+.main .month p{
+	color: #fff;
+	font-size: 1.5em;
+	text-decoration-line: underline;
+	text-decoration-color: red;
+}
+	
+
+.main .list-event {
+	border-top: 2px solid  black;
+	color: rgb(247, 245, 245);
+	font-weight: 500;
+	font-size: 15px;
+	border:3px solid rgba(216, 197, 197, 0.32);
+	background-color: rgba(128, 128, 128, 0.404);
+}
+	.list-event .list-item{
+		display: flex;
+		min-height: 40px;
+	}
+	.list-event .list-item:not(:first-child):hover{
+		background: rgba(153, 151, 151, 0.226);	
+	}
+	
+	.list-event .list-head{
+		background-color: rgb(255, 255, 255);
+		color: #000;
+		opacity: 0.9;
+		text-transform: uppercase;
+		font-weight: 800;
+
+	}
+	.list-event .list-item .event-cell_item{
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		border-left: 1px solid #000;
+	}
+
+	.event-cell_item:nth-child(1){	width: 15%;	}
+	.event-cell_item:nth-child(2){	width: 50%;	}
+	.event-cell_item:nth-child(3){	width: 20%;	}
+	.event-cell_item:nth-child(4){	width: 15%;	}
+
+	.list-content:nth-child(even){	
+		background: rgba(0, 0, 0, 0.199);	
+	}
+	.list-content .date{
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
+	.date .month{
+		font-size: 1.2em;
+		mt2px
+	}
+	
+	.PAID:hover{
+		font-weight: 700;
+		font-size: 1.05em;
+	}
+	.list-content .name-event a,
+	.list-content .name-event a:visited,
+	.list-content .name-event a:active{
+		color: white;
+	}
+		.name-event a sup{
+			font-family: "Times New Roman"!important;
+			color: black;
+			font-weight: 600;
+			font-size: 1.2em;
+		}
+
+/* END MAIN */
+
+
+/* SPONSOR */  
+.sponsor{
+	grid-area: sponsor;
+	background-color: rgba(128, 128, 128, 0.342);
+	color: #fff;
+	
+	opacity: 0.9;
+}
+
+.sponsor-item,
+.mostawaited-event{
+	border:3px solid #fff;
+}
+	.title-mostawaited_event{
+		font-size: 1.8em;
+		text-decoration-line: underline;
+		text-decoration-color: red;
+		padding: 5px 0;
+		
+	}
+	.mostawaited-list{
+		display: flex;
+		align-items: center;
+		height: 30px;
+		color: #fff;
+		font: 0.8em sans-serif;
+	}
+	.mostawaited-item:nth-child(1){
+		width: 25%;	
+	}
+	.mostawaited-item:nth-child(2){
+		width: 50%;	
+		text-align: center;
+	}
+	.mostawaited-item:nth-child(3){
+		width: 25%;	
+	}
+/* END SPONSOR */
+
+/* FOOTER */  
+footer{
+	grid-area: footer;
+	background-color: black;
+    
+}
+/* END FOOTER */
+
