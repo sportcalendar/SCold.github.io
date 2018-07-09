@@ -26,6 +26,9 @@ header{
 
 /* @media FOR TABLETS and LITTLE SCREEN */
 @media screen and (min-width: 768px){
+	.container{
+		margin: 0 10px;
+	}
 
 /* HEADER */
 	.social-item img{
@@ -40,29 +43,20 @@ header{
 	}
 /* END HEADER */
 
-.content-section{
-	margin: 0;
-	padding: 0;
-	display: flex;
-	justify-content: space-between;
-}
-
 /* NAVIGATION */
 	nav{
-		overflow-x: scroll ;
 		background-color:var(--main--bg_light);
 		color: var(--main-color);
-		font-size: 15px;
+		font-size: 13px;
+		min-width: 100%;
 	}
 	.nav-menu{
 		display: flex;
 		justify-content: flex-start;
-		height: 45px;
-		min-height: 45px;
 	}
 	.nav-item{
 		padding: 3px;
-		min-width: 40px;
+		min-width: 60px;
 		border-right: 1px solid grey;	
 		
 	}
@@ -71,7 +65,8 @@ header{
 		box-shadow: 0 0 10px rgba(0,0,0,0.5);
 	}
 	.nav-item img{
-		width: 110%;
+		min-width: 60px;
+		height: 50px;
 	}
 /* END NAVIGATION */
 
@@ -80,13 +75,13 @@ header{
 		display: none;
 	} 
 	.sponsor{
-		width: 34%;
+		width: 30%;
 		padding-right: 5px;
-		background-color: rgba(128, 128, 128, 0.295);
+		
 	}
 	.sponsor-item img{
-		width: 100%;
-		margin-bottom: 10px;
+		width: 80%;
+		margin: 10px;
 	}
 	/*.title-mostawaited_event{
 		padding: 15px 5px;
@@ -108,6 +103,11 @@ header{
 /* END SPONSOR */
 
 /* MAIN */ 
+.content-section{
+	display: flex;
+	justify-content: space-between;
+	
+}
 	main{
 	width:65%;
 	} 
@@ -116,24 +116,21 @@ header{
 	.show{display: block;}
 
 	h1{
-		color: white;
-		font-size: 15px;
-		margin: 5px;
-	/*flex-shrink: 0;*/
+		display: none;
 	}
 
 	.filter-menu{
 		display: flex;
-		flex-direction: column;
 		color: #fff; 
-		justify-content: space-around;
 	}
 		.filter-menu select{
-			margin:  5px;
-			font-size: 10px;
+			margin:  25px 55px 0 0 ;
+			font-size: 14px;
 			background: var(--main--bg_light);
 			color: var(--main-color);
 			border: none;
+			min-height: 20px;
+			min-width: 20%;
 		}
 			option{
 				text-transform: uppercase;
@@ -146,16 +143,15 @@ header{
 			}	
 	.month p{
 		color: var(--main-color_white);
-		font-size: 19px;
+		font-size: 18px;
 		font-weight: 600;
-		margin: 5px;
+		margin: 15px 5px 15px 0;
 	}
 	
 	.list-event {
 		color: var(--main-color_white);
 		background-color: rgba(128, 128, 128, 0.404);
-		margin: 0 5px;
-		font-size: 13px;
+		font-size: 14px;
 		/*line-height: 14px;*/
 	}
 	.list-item{
@@ -174,7 +170,7 @@ header{
 	}
 	.event-cell_item{
 		display: flex;
-		justify-content: center;
+		justify-content: flex-start;
 		align-items: center;
 		border-left: 1px solid var(--border-color_grey);
 		padding: 0 5px;
@@ -184,9 +180,9 @@ header{
 		border-left: none
 	}
 
-	.event-cell_item:nth-child(1){	min-width: 11%;	}
+	.event-cell_item:nth-child(1){	min-width: 13%;	}
 	.event-cell_item:nth-child(2){	min-width: 37%;	}
-	.event-cell_item:nth-child(3){	min-width: 26%;	}
+	.event-cell_item:nth-child(3){	min-width: 27%;	}
 	.event-cell_item:nth-child(4){	min-width: 23%;	}
 
 	.list-content:nth-child(even){	
@@ -274,7 +270,7 @@ header{
 
 	h1{
 		color: white;
-		font-size: 15px;
+		font-size: 20px;
 		margin: 5px;
 	/*flex-shrink: 0;*/
 	}
@@ -292,7 +288,7 @@ header{
 	}
 		.filter-menu select{
 			margin:  5px;
-			font-size: 10px;
+			font-size: 13px;
 			background: var(--main--bg_light);
 			color: var(--main-color);
 			border: none;
@@ -308,7 +304,7 @@ header{
 			}	
 	.month p{
 		color: var(--main-color_white);
-		font-size: 14px;
+		font-size: 16px;
 		margin: 5px;
 	}
 	
@@ -316,7 +312,7 @@ header{
 		color: var(--main-color_white);
 		background-color: rgba(128, 128, 128, 0.404);
 		margin: 0 5px;
-		font-size: 11px;
+		font-size: 14px;
 		/*line-height: 14px;*/
 	}
 	.list-item{
@@ -327,11 +323,12 @@ header{
 	.list-head{
 		background-color: var(--main--bg_light);
 		color: var(--main-color);
-		font-weight: 550;
+		font-weight: 700;
 		opacity: 0.95;
 		text-transform: uppercase;
 		min-height: 25px;
 		height: 25px;
+		font-size: 13px;
 	}
 	.event-cell_item{
 		display: flex;
@@ -344,10 +341,7 @@ header{
 		.event-cell_item:nth-child(1){
 			border-left: none
 		}
-	.date,
-	.list-head{
-		font-size: 9px!important;
-	}
+	
 
 	.event-cell_item:nth-child(1){	min-width: 13%;	}
 	.event-cell_item:nth-child(2){	min-width: 37%;	}
