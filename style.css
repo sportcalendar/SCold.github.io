@@ -317,8 +317,8 @@ header{
 	}
 	.list-item{
 		display: flex;
-		max-height: 45px;
-		height: 45px;
+		max-height: 55px;
+		height: 55px;
 	}
 	.list-head{
 		background-color: var(--main--bg_light);
