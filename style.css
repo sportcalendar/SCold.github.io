@@ -339,7 +339,7 @@ header{
 		margin: 0;
 	}
 		.event-cell_item:nth-child(1){
-			border-left: none
+			border-left: none;
 		}
 	
 
@@ -355,7 +355,7 @@ header{
 	.list-content .name-event a,
 	.list-content .name-event a:visited,
 	.list-content .name-event a:active{
-		color: white;
+		color:var(--main-color_white);
 		
 	}
 /* END MAIN */
