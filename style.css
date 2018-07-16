@@ -344,10 +344,10 @@ main{	display: flex;	flex-direction: column;	}
 		}
 	
 
-	.event-cell_item:nth-child(1){	min-width: 40px; width: 15%; font-size: 11px;	}
+	.event-cell_item:nth-child(1){	min-width: 41px; width: 15%; font-size: 11px;	}
 	.event-cell_item:nth-child(2){	min-width: 110px; width: 35%;font-size: 12px; line-height: 1.4; text-transform: uppercase;}
 	.event-cell_item:nth-child(3){	min-width: 85px; width: 25%;font-size: 12px;	}
-	.event-cell_item:nth-child(4){	min-width: 85px; width: 25%;font-size: 12px;	}
+	.event-cell_item:nth-child(4){	min-width: 84px; width: 25%;font-size: 12px;	}
 
 	.list-content:nth-child(even){	
 		background: rgba(0, 0, 0, 0.199);	
