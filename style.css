@@ -48,10 +48,10 @@ body{
   display: flex;  
 	align-items: center;  
 	color: var(--main-color);
-	font-size: 14px;
+	font-size: 15px;
 }
   .headerMob .logo img{
-		width: 100px;
+		width: 110px;
 		margin: 5px 0 0 5px;
 	}
 	.headerSocialMenu{
