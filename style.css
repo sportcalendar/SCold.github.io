@@ -11,7 +11,6 @@
 	padding: 0;
 	margin: 0;
 }
-
 header a:focus,
 header a:hover{
 	border-bottom: 1px solid var(--main-color);
@@ -32,13 +31,16 @@ header .headerMenu{
 .logo:hover{
 	border: none;
 }
-
 body{
 	 background-image: linear-gradient(to top, rgba(30,87,153,0), rgba(30,87,153,0.8), rgba(30,87,153,1),
 		rgba(30,87,153,1), rgba(41,137,216,1), rgba(30,87,153,1), rgba(30,87,153,1),
 		rgba(30,87,153,0.8),rgba(30,87,153,0));
-	}
-
+}
+.mainLine{
+	border: none;
+	background-color: var(--main-color);
+	height: 1px;
+}
 @media (max-width: 550px){
   
   .header{
@@ -65,11 +67,12 @@ body{
    flex-direction: column;
  }
   .sponsorsLogo{
-    display: flex;
+		display: flex;
+		overflow: scroll;
   }
   .sponsorsLogo img{
-    width: 95%;
-    margin-top: 5px;
+    width: 130px;
+    margin: 5px;
   }
 }
 
@@ -97,6 +100,19 @@ body{
 	.headerSocialMenu a{
 		margin-right: 5px;
 	}
+	/*---MAIN---*/
+	main{
+		display: flex;
+		flex-direction: column;
+	}
+	 .sponsorsLogo{
+		 display: flex;
+		 overflow: scroll;
+	 }
+	 .sponsorsLogo img{
+		 width: 97%;
+		 margin-top: 5px;
+	 }
 }
 @media (min-width: 768px){
 	.headerMob{
@@ -122,4 +138,16 @@ body{
 	.headerSocialMenu a{
 		margin-right: 15px;
 	}
+
+	/*---MAIN---*/
+	main{
+		display: flex;
+		flex-direction: row-reverse;
+	}
+	
+	.sponsorsLogo img{
+		width: 500px;
+		margin: 15px ;
+	}
+	
 }
