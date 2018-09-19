@@ -69,12 +69,15 @@ body{
    display: flex;
    flex-direction: column;
  }
-  .sponsorsLogo{
+ .sponsorsLogo{
+	 display: none;
+ }
+  .sponsorsLogoMob{
 		display: flex;
 		overflow: scroll;
   }
-  .sponsorsLogo img{
-    width: 150px;
+  .sponsorsLogoMob img{
+    width: 100px;
     margin: 5px;
 	}
 	
@@ -116,6 +119,9 @@ body{
 
 	/*---MAIN---*/
 	
+	.sponsorsLogoMob{
+		display: none;
+	}
 	 .sponsorsLogo{
 		 display: flex;
 		 overflow: scroll;
@@ -175,6 +181,10 @@ body{
 	main{
 		display: flex;
 		flex-direction: row-reverse;
+	}
+
+	.sponsorsLogoMob{
+		display: none;
 	}
 	
 	.sponsorsLogo img{
