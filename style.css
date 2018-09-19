@@ -21,12 +21,6 @@ header a:active{
 	color: var(--main-color);
 	font-weight: bold;
 }
-header .headerSocialMenu,
-header .logo,
-header .headerMenu{
-  width: 33%;
-  
-}
 .logo:focus,
 .logo:hover{
 	border: none;
@@ -61,33 +55,48 @@ body{
 		display: flex;
 		justify-content: space-around;
 	}
+	header .headerSocialMenu,
+	header .logo,
+	header .headerMenu{
+  width: 33%;
+  
+}
 
-	
-
-  /*---MAIN---*/
+/*---MAIN---*/
  main{
    display: flex;
    flex-direction: column;
  }
- .sponsorsLogo{
-	 display: none;
- }
-  .sponsorsLogoMob{
-		display: flex;
-		overflow: scroll;
-  }
-  .sponsorsLogoMob img{
-    width: 100px;
-    margin: 5px;
+	.sponsorsLogo{
+		display: none;
 	}
-	
-
-	/*Title*/
-	.titleMob{
-		font-size: 20px;
-		text-align: center;
-		color: var(--main-color_white);
-	}
+		.sponsorsLogoMob{
+			display: flex;
+			overflow: scroll;
+		}
+		.sponsorsLogoMob img{
+			width: 100px;
+			margin: 5px;
+		}
+			/*Title*/
+			.titleMob{
+				font-size: 22px;
+				text-align: center;
+				color: var(--main-color_white);
+			}
+		/*Nav*/	
+		nav{
+			width: 100%;
+			overflow: scroll;
+			background: rgba(255, 255, 255, 0.281);
+		}
+		.navMenu{
+			display: flex;
+		}
+		.navItem{
+			border: 1px solid var(--main--bg_light);
+			border-left: none;
+		}
 }
 
 /*---TABLET---*/
@@ -100,6 +109,12 @@ body{
 		align-items: center;
 		justify-content: flex-start;
 	}
+	header .headerSocialMenu,
+	header .logo,
+	header .headerMenu{
+  width: 33%;
+  
+}
 	.header .logo img{
 		width: 120px;
 		margin: 5px 0 0 5px;
@@ -137,6 +152,20 @@ body{
 		text-align: center;
 		color: var(--main-color_white);
 	}
+
+	/*Nav*/	
+	nav{
+		width: 100%;
+		overflow: scroll;
+		background: rgba(255, 255, 255, 0.281);
+	}
+	.navMenu{
+		display: flex;
+	}
+	.navItem{
+		border: 1px solid var(--main--bg_light);
+		border-left: none;
+	}
 }
 
 /*---DESKTOP---*/
@@ -149,6 +178,12 @@ body{
 		align-items: center;
 		justify-content: flex-start;
 	}
+	header .headerSocialMenu,
+	header .logo,
+	header .headerMenu{
+  width: 33%;
+  
+}
 	.header .logo{
 		width: 50%;
 	}
@@ -190,6 +225,20 @@ body{
 	.sponsorsLogo img{
 		width: 350px;
 		margin: 15px ;
+	}
+
+	/*Nav*/	
+	nav{
+		width: 100%;
+		
+		background: rgba(255, 255, 255, 0.281);
+	}
+	.navMenu{
+		display: flex;
+	}
+	.navItem{
+		border: 1px solid var(--main--bg_light);
+		border-left: none;
 	}
 	
 }
