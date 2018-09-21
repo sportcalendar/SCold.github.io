@@ -1,5 +1,5 @@
 :root{
-	--main-color: rgb(47, 47, 107);
+	--main-color: #183867;
 	--main-color_white:rgb(247, 245, 245);
 	--main--bg_light:rgba(255, 255, 255, 0.9215686274509803);
 	--border-color_grey: rgba(216, 197, 197, 0.32);
@@ -37,7 +37,7 @@ body{
 }
 
 /*---MOBILE---*/
-@media (max-width: 550px){
+@media (max-width: 640px){
 .header{
   display: none;
 }
@@ -59,7 +59,9 @@ body{
 	header .logo,
 	header .headerMenu{
   width: 33%;
-  
+}
+.title{
+	display: none;
 }
 
 /*---MAIN---*/
@@ -80,7 +82,7 @@ body{
 		}
 			/*Title*/
 			.titleMob{
-				font-size: 22px;
+				font-size: 24px;
 				text-align: center;
 				color: var(--main-color_white);
 			}
@@ -97,10 +99,27 @@ body{
 			border: 1px solid var(--main--bg_light);
 			border-left: none;
 		}
+
+		/*Filters*/
+		.filterMenu{
+			display: flex;
+			justify-content: space-between;
+			margin: 10px 0;
+			color: var(--main-color_white);
+		}
+		.filterItem{
+			width: 30%;
+			
+		}
+		select{
+			width: 100%;
+			color: var(--main-color);
+			font-weight: 700;
+		}
 }
 
 /*---TABLET---*/
-@media (min-width: 550px) and (max-width: 800px){
+@media (min-width: 640px) and (max-width: 1020px){
 	.headerMob{
 		display: none;
 	}
@@ -131,6 +150,9 @@ body{
 		margin-right: 5px;
 	}
 
+	.title{
+		display: none;
+	}
 
 	/*---MAIN---*/
 	
@@ -148,7 +170,7 @@ body{
 
 	 /*Title*/
 	.titleMob{
-		font-size: 20px;
+		font-size: 26px;
 		text-align: center;
 		color: var(--main-color_white);
 	}
@@ -166,79 +188,138 @@ body{
 		border: 1px solid var(--main--bg_light);
 		border-left: none;
 	}
+
+	/*Filters*/
+	.filterMenu{
+		display: flex;
+		justify-content: space-between;
+		margin: 10px 5px;
+		color: var(--main-color_white);
+	}
+	.filterItem{
+		width: 33%;
+		display: flex;
+	}
+	select{
+		color: var(--main-color);
+		font-weight: 700;
+		width: 50%;
+	}
+	label{
+		margin-right: 5px;
+	}
 }
 
 /*---DESKTOP---*/
-@media (min-width: 800px){
-	.headerMob{
-		display: none;
+@media (min-width: 1020px) {
+	.container{ 
+		width: 1000px;
+		margin: 0 auto;
+		border: 1px solid gray;
+		padding: 5px;
 	}
-	.header{
-		display: flex;
-		align-items: center;
-		justify-content: flex-start;
-	}
-	header .headerSocialMenu,
-	header .logo,
-	header .headerMenu{
-  width: 33%;
-  
-}
-	.header .logo{
-		width: 50%;
-	}
-	.header .logo img{
-		width: 140px;
-		margin: 5px 0 0 5px;
-	}
-	.titleDesktop{
-		font-size: 18px;
-		color: var(--main-color);
-	}
-	.headerMenu{
-		display: flex;
-		justify-content: space-between;
-	}
-	.headerSocialMenu{
-		display: flex;
-		justify-content: flex-end;
-	}
-	.headerSocialMenu a{
-		margin-right: 15px;
-	}
-
-	/*Title*/
-	.titleMob{
-		display: none;
-	}
-
-	/*---MAIN---*/
-	main{
-		display: flex;
-		flex-direction: row-reverse;
-	}
-
-	.sponsorsLogoMob{
-		display: none;
-	}
-	
-	.sponsorsLogo img{
-		width: 350px;
-		margin: 15px ;
-	}
-
-	/*Nav*/	
-	nav{
-		width: 100%;
+/*Header*/
+		.headerMob{
+			display: none;
+		}
+		.header{
+			display: flex;
+			align-items: center;
+			justify-content: flex-start;
+		}
+		header .headerSocialMenu,
+		header .logo,
+		header .headerMenu{
+		width: 33%;
+		}
+		.header .logo{
+			width: 50%;
+		}
+		.header .logo img{
+			width: 140px;
+			margin: 5px 0 0 5px;
+		}
 		
-		background: rgba(255, 255, 255, 0.281);
-	}
-	.navMenu{
-		display: flex;
-	}
-	.navItem{
-		border: 1px solid var(--main--bg_light);
-		border-left: none;
-	}
+		.headerMenu{
+			display: flex;
+			justify-content: space-between;
+		}
+		.headerSocialMenu{
+			display: flex;
+			justify-content: flex-end;
+		}
+		.headerSocialMenu a{
+			margin-right: 15px;
+		}
+
+/*Title*/
+		.titleMob{
+			display: none;
+		}
+		.title{
+			color: var(--main-color);
+		}
+
+/*MAIN*/
+		main{
+			display: flex;
+			flex-direction: row-reverse;
+			justify-content: space-between;
+		}
+		.sponsorsLogoMob{
+			display: none;
+		}
+		.eventSection{
+			width: 600px;
+		}
+		.sponsorsLogo{
+			width: 360px;
+		}
+
+/*Sponsor*/
+		.sponsorsLogo img{
+			width: 100%;
+		
+		}
+		.sponsorItem{
+			margin-bottom: 10px;
+		}
+/*Nav*/	
+		nav{
+			width: 100%;
+			background: rgba(255, 255, 255, 0.281);
+		}
+		.navMenu{
+			display: flex;
+		}
+		.navItem{
+			border: 1px solid var(--main--bg_light);
+			border-left: none;
+		}
 	
+/*Filters*/
+		.filterMenu{
+			display: flex;
+			justify-content: space-between;
+			margin: 10px 0;
+			color: var(--main-color_white);
+		}
+		.filterItem{
+			width: 33%;
+			display: flex;
+		}
+		.filterItem:nth-child(2){
+			justify-content:center;
+		}
+		.filterItem:last-child{
+			justify-content: flex-end;
+		}
+		select{
+			color: var(--main-color);
+			font-weight: 700;
+			width: 50%;
+		}
+		label{
+			margin-right: 5px;
+		}
 }
