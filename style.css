@@ -116,7 +116,65 @@ body{
 			color: var(--main-color);
 			font-weight: 700;
 		}
+
+/*--EVENT--*/
+.listEvent{
+	color: var(--main-color_white);
 }
+.listEvent a,
+.listEvent a:active{
+	color: var(--main-color_white);
+}
+.listHead,
+.listContent{
+	display: flex;
+	width: 100%;
+	border-bottom: 1px solid gray;
+	padding: 5px;
+}
+.listHead{
+	text-transform: uppercase;
+	font-weight: 700;
+	color: var(--main-color);
+	background: var(--main--bg_light);
+}
+.dateEvent{
+	min-width: 45px;
+	width: 13%;
+	text-align: center;
+	align-self: center;
+}
+.nameEvent{
+	min-width: 160px;
+	width: 55%;
+	align-self: center;
+	text-align: left;
+	padding: 0 10px;
+	display: flex;
+	flex-direction: column;
+	text-transform: uppercase;
+}
+.orgEvent{
+	display: none;
+}
+.mobOrgEvent{
+	font-size: 0.8em;
+	align-self:flex-start;
+	text-transform: none;
+}
+.locEvent{
+	min-width: 100px;
+	width: 22%;
+	align-self: center;
+	text-align: left;
+	padding: 0 5px;
+}
+footer{
+	margin: 20px 0;
+	color: var(--main-color);
+}
+}
+
 
 /*---TABLET---*/
 @media (min-width: 640px) and (max-width: 1020px){
@@ -202,12 +260,68 @@ body{
 	}
 	select{
 		color: var(--main-color);
-		font-weight: 700;
+		font-weight: bolder;
 		width: 50%;
+		text-transform: uppercase;
 	}
 	label{
 		margin-right: 5px;
 	}
+
+	/*--EVENT--*/
+.listEvent{
+	color: var(--main-color_white);
+}
+.listEvent a,
+.listEvent a:active{
+	color: var(--main-color_white);
+}
+.listHead,
+.listContent{
+	display: flex;
+	width: 100%;
+	border-bottom: 1px solid gray;
+	padding: 2px 0;
+}
+.listHead{
+	text-transform: uppercase;
+	font-weight: 700;
+	color: var(--main-color);
+	background: var(--main--bg_light);
+	text-align: center;
+}
+.listContent{
+	height: 40px;
+	align-items: center;
+}
+.dateEvent{
+	min-width: 50px;
+	width: 8%;
+	text-align: center;
+}
+.nameEvent{
+	min-width: 330px;
+	width: 50%;
+	text-transform: uppercase;
+	padding-left: 15px;
+}
+.orgEvent{
+	min-width: 130px;
+	width: 21%;
+	padding-left: 10px;
+}
+.mobOrgEvent{
+	display: none;
+}
+.locEvent{
+	min-width: 130px;
+	width: 21%;
+	padding-left: 10px;
+}
+footer{
+	margin: 20px 0;
+	color: var(--main-color);
+}
 }
 
 /*---DESKTOP---*/
@@ -270,10 +384,10 @@ body{
 			display: none;
 		}
 		.eventSection{
-			width: 600px;
+			width: 650px;
 		}
 		.sponsorsLogo{
-			width: 360px;
+			width: 320px;
 		}
 
 /*Sponsor*/
@@ -322,4 +436,59 @@ body{
 		label{
 			margin-right: 5px;
 		}
+
+		/*--EVENT--*/
+.listEvent{
+	color: var(--main-color_white);
+}
+.listEvent a,
+.listEvent a:active{
+	color: var(--main-color_white);
+}
+.listHead,
+.listContent{
+	display: flex;
+	width: 100%;
+	border-bottom: 1px solid gray;
+	padding: 2px 0;
+}
+.listHead{
+	text-transform: uppercase;
+	font-weight: 700;
+	color: var(--main-color);
+	background: var(--main--bg_light);
+	text-align: center;
+}
+.listContent{
+	height: 40px;
+	align-items: center;
+}
+.dateEvent{
+	min-width: 50px;
+	width: 8%;
+	text-align: center;
+}
+.nameEvent{
+	min-width: 330px;
+	width: 50%;
+	text-transform: uppercase;
+	padding-left: 15px;
+}
+.orgEvent{
+	min-width: 130px;
+	width: 21%;
+	padding-left: 10px;
+}
+.mobOrgEvent{
+	display: none;
+}
+.locEvent{
+	min-width: 130px;
+	width: 21%;
+	padding-left: 10px;
+}
+footer{
+	margin: 20px 0;
+	color: var(--main-color);
+}
 }
