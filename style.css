@@ -118,6 +118,13 @@ body{
 		}
 
 /*--EVENT--*/
+.month{
+	text-transform: uppercase;
+	text-decoration: underline ;
+	color: var(--main-color);
+	margin: 5px 0;
+}
+
 .listEvent{
 	color: var(--main-color_white);
 }
@@ -329,7 +336,6 @@ footer{
 	.container{ 
 		width: 1000px;
 		margin: 0 auto;
-		border: 1px solid gray;
 		padding: 5px;
 	}
 /*Header*/
@@ -393,7 +399,7 @@ footer{
 /*Sponsor*/
 		.sponsorsLogo img{
 			width: 100%;
-		
+			border: 1px solid var(--main--bg_light);
 		}
 		.sponsorItem{
 			margin-bottom: 10px;
@@ -402,6 +408,7 @@ footer{
 		nav{
 			width: 100%;
 			background: rgba(255, 255, 255, 0.281);
+			border: 1px solid var(--main--bg_light);
 		}
 		.navMenu{
 			display: flex;
@@ -415,7 +422,7 @@ footer{
 		.filterMenu{
 			display: flex;
 			justify-content: space-between;
-			margin: 10px 0;
+			margin: 15px 0;
 			color: var(--main-color_white);
 		}
 		.filterItem{
@@ -432,14 +439,24 @@ footer{
 			color: var(--main-color);
 			font-weight: 700;
 			width: 50%;
+			text-transform: uppercase;
 		}
 		label{
 			margin-right: 5px;
 		}
 
-		/*--EVENT--*/
+/*--EVENT--*/
+.month{
+	text-transform: uppercase;
+	color: var(--main-color_white);
+	font-weight: bold;
+	margin: 15px 0 10px 0;
+	font-size: 1.2em;
+}
+
 .listEvent{
 	color: var(--main-color_white);
+	border: 1px solid var(--main--bg_light);
 }
 .listEvent a,
 .listEvent a:active{
