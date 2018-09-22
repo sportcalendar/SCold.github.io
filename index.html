@@ -105,7 +105,6 @@
         </section> 
     <!-- end SPONSOR section -->
 
-        
         <h1 class="titleMob">Аматорські спортивні події</h1>
 
     <!--main-Events-->
@@ -182,7 +181,7 @@
 
             <!-- FILTERS -->
             <div class="filterMenu">
-                    <div class="locationFilter  filterItem">
+                    <div class="locEventFilter  filterItem">
                         <label for="">Локація</label>
                         <select>
                             <option>Дніпро</option>
@@ -204,7 +203,7 @@
                         </select>
                     </div>
                     
-                    <div class="DateFilter filterItem">
+                    <div class="dateEventFilter filterItem">
                         <label for="">Місяць</label>
                         <select>
                             <option>Квітень</option>
@@ -222,111 +221,122 @@
             </div>
 
             <!--LIST EVENT-->
-            <div class="list-event">                   
+            <div class="listEvent">                   
 
             <!--Header Content-->
-                    <div class="list-head  list-item">
-                        <div class="date event-cell_item">дата</div>
-                        <div class="name-event event-cell_item">назва події</div>
-                        <div class="organizer event-cell_item">організатор</div>
-                        <div class="location event-cell_item">Локація</div>
-                    </div>  
+                <div class="listHead  ">
+                    <div class="dateEvent eventCell">дата</div>
+                    <div class="nameEvent eventCell">назва події</div>
+                    <div class="orgEvent eventCell">організатор</div>
+                    <div class="locEvent eventCell">Локація</div>
+                 </div>  
             <!--Header Content-->
+                     
+                <!--Фест водного спорту-->
+                <div class="listContent FestVodnyiSports">
+                    <div class="dateEvent eventCell">15-16 </div>
+                    <div class="nameEvent eventCell">Фестиваль Водних Видів Спорту 
+                        <br> 
+                        <span class="mobOrgEvent">Клуб "Байдарка"</span>
+                        <!-- <button id="showbtnFest">раск</button> -->
+                    </div>
+                    <div class="orgEvent eventCell">-</div>
+                    <div class="locEvent eventCell">Одеса</div>
+                </div><!--Фест водного спорту end-->
+                    <!-- <div class="outFest">
+                        <p >Lorem ipsum dolor sit amet consectetur <br>
+                            Lorem ipsum dolor sit amet consectetur <br>
+                            Lorem ipsum dolor sit amet consectetur <br>
+                            Lorem ipsum dolor sit amet consectetur <br>
+                        </p>
+                    </div> -->
 
-                    <!--BAYDA-->
-                            <div class=" list-content  list-item bayda-rali">
-                                <div class="date event-cell_item">27-29</div>
-                                <div class="name-event event-cell_item"> київський каяк марафон 
-                                    <br> 
-                                    <span class="mob-organizer">Клуб "Байдарка"</span>
-                                </div>
-                                <div class="organizer event-cell_item">Клуб "Байдарка"</div>
-                                <div class="location event-cell_item">Івано- Франківськ</div>
-                            </div>
-                    <!--BAYDA end-->
+                <!--ARHIPELAG-->
+                <div class="listContent  arhipelag PAID">
+                    <div class="dateEvent eventCell">01-03</div>                        
+                    <div class="nameEvent eventCell ">
+                         <a href="#">Архіпелаг-О</a>
+                         <br> 
+                        <span class="mobOrgEvent">Клуб "Байдарка"</span>
+                        <!-- <button id="showbtnFest">раск</button> -->
+                        <!-- <button id="showbtnArchipelag">раск</button> -->
+                    </div>
+                    <div class="orgEvent eventCell">Life-n-Action</div>
+                    <div class="locEvent eventCell">Камінець- Подільський</div>
+                </div> <!--ARHIPELAG end-->  
+                <!-- <div class="out ">
+                    <p >Lorem ipsum dolor sit amet consectetur <br>
+                        Lorem ipsum dolor sit amet consectetur <br>
+                        Lorem ipsum dolor sit amet consectetur <br>
+                        Lorem ipsum dolor sit amet consectetur <br>
+                    </p>
+                </div> -->
                             
-                            <!--КубокЧорногоМоря-->
-                            <div class=" list-content list-item kubok-chernogo_morya">
-                                <div class="date event-cell_item">09-10</div>
-                                <div class="name-event event-cell_item">Кубок Чорного Моря
-                                        <br> 
-                                        <span class="mob-organizer">Клуб "Байдарка"</span>
-                                </div>
-                                <div class="organizer event-cell_item">Одеська Федерація Sup</div>
-                                <div class="location event-cell_item">Южне</div>
-                            </div><!--КубокЧерногоМоря end-->
+                <!--CanoePolo-->
+                <div class="listContent CanoePolo PAID">
+                    <div class="dateEvent eventCell">23-24</div>
+                    <div class="nameEvent eventCell ">
+                        <a href="#">Кануполо <!--<sup>i</sup>--></a>
+                        <br> 
+                        <span class="mobOrgEvent">Клуб "Байдарка"</span>
+                        <!-- <button id="showbtnFest">раск</button> -->
+                    </div>
+                    <div class="orgEvent eventCell">Федерація Кануполо</div>
+                    <div class="locEvent eventCell">Київ</div>
+                </div><!--CanoePolo end--> 
+                <!--Фест водного спорту-->
+                <div class="listContent FestVodnyiSports">
+                    <div class="dateEvent eventCell">15-16 </div>
+                    <div class="nameEvent eventCell">Фестиваль Водних Видів Спорту 
+                        <br> 
+                        <span class="mobOrgEvent">Клуб "Байдарка"</span>
+                        <!-- <button id="showbtnFest">раск</button> -->
+                    </div>
+                    <div class="orgEvent eventCell">-</div>
+                    <div class="locEvent eventCell">Одеса</div>
+                </div><!--Фест водного спорту end-->
+                    <!-- <div class="outFest">
+                        <p >Lorem ipsum dolor sit amet consectetur <br>
+                            Lorem ipsum dolor sit amet consectetur <br>
+                            Lorem ipsum dolor sit amet consectetur <br>
+                            Lorem ipsum dolor sit amet consectetur <br>
+                        </p>
+                    </div> -->
 
-                            <!--Фест водного спорту-->
-                            <div class=" list-content list-item FestVodnyiSports">
-                                    <div class="date event-cell_item">15-16 </div>
-                                    <div class="name-event event-cell_item">Фестиваль Водних Видів Спорту 
-                                            <br> 
-                                            <span class="mob-organizer">Клуб "Байдарка"</span>
-                                            <!-- <button id="showbtnFest">раск</button> -->
-                                    </div>
-                                    <div class="organizer event-cell_item">-</div>
-                                    <div class="location event-cell_item">Одеса</div>
-                                </div><!--Фест водного спорту end-->
-                                <!-- <div class="outFest">
-                                    <p >Lorem ipsum dolor sit amet consectetur <br>
-                                        Lorem ipsum dolor sit amet consectetur <br>
-                                        Lorem ipsum dolor sit amet consectetur <br>
-                                        Lorem ipsum dolor sit amet consectetur <br>
-                                    </p>
-                                </div> -->
-
-                            <!--ARHIPELAG-->
-                            <div class="list-content list-item arhipelag PAID">
-                                <div class="date event-cell_item">01-03</div>                        
-                                <div class="name-event event-cell_item ">
-                                    <a href="#">Архіпелаг-О</a>
-                                    <!-- <button id="showbtnArchipelag">раск</button> -->
-                                </div>
-                                <div class="organizer event-cell_item">Life-n-Action</div>
-                                <div class="location event-cell_item">Камінець- Подільський</div>
-                            </div> <!--ARHIPELAG end-->  
-                            <!-- <div class="out ">
-                                <p >Lorem ipsum dolor sit amet consectetur <br>
-                                    Lorem ipsum dolor sit amet consectetur <br>
-                                    Lorem ipsum dolor sit amet consectetur <br>
-                                    Lorem ipsum dolor sit amet consectetur <br>
-                                </p>
-                            </div> -->
-
-
+                <!--ARHIPELAG-->
+                <div class="listContent  arhipelag PAID">
+                    <div class="dateEvent eventCell">01-03</div>                        
+                    <div class="nameEvent eventCell ">
+                         <a href="#">Архіпелаг-О</a>
+                         <br> 
+                        <span class="mobOrgEvent">Клуб "Байдарка"</span>
+                        <!-- <button id="showbtnFest">раск</button> -->
+                        <!-- <button id="showbtnArchipelag">раск</button> -->
+                    </div>
+                    <div class="orgEvent eventCell">Life-n-Action</div>
+                    <div class="locEvent eventCell">Камінець- Подільський</div>
+                </div> <!--ARHIPELAG end-->  
+                <!-- <div class="out ">
+                    <p >Lorem ipsum dolor sit amet consectetur <br>
+                        Lorem ipsum dolor sit amet consectetur <br>
+                        Lorem ipsum dolor sit amet consectetur <br>
+                        Lorem ipsum dolor sit amet consectetur <br>
+                    </p>
+                </div> -->
                             
-
-                            <!--CanoePolo-->
-                            <div class=" list-content list-item CanoePolo PAID">
-                                <div class="date event-cell_item">23-24</div>
-                                <div class="name-event event-cell_item ">
-                                    <a href="#">Кануполо <!--<sup>i</sup>--></a>
-                                </div>
-                                <div class="organizer event-cell_item">Федерація Кануполо</div>
-                                <div class="location event-cell_item">Київ</div>
-                            </div><!--CanoePolo end-->
-
-                            <!--Водний Рогейн-->
-                            <div class=" list-content list-item VodnyiRogein">
-                                <div class="date event-cell_item">07-08 </div>
-                                <div class="name-event event-cell_item">Водний Рогейн</div>
-                                <div class="organizer event-cell_item">Клуб "Суворовець"</div>
-                                <div class="location event-cell_item">Херсон</div>
-                            </div><!--Водний Рогейн end-->
-
-                            
-
-                            <!--ЧемпУкр з SUP 2-й етап-->
-                            <div class=" list-content list-item SupTourmament">
-                                <div class="date event-cell_item">15-17 </div>
-                                <div class="name-event event-cell_item">SUP Чемпіонат України</div>
-                                <div class="organizer event-cell_item">UFSS</div>
-                                <div class="location event-cell_item">Буковель</div>
-                            </div><!--ЧемпУкр з SUP 2-й етап end-->
-
-                        
-
-                        
+                <!--CanoePolo-->
+                <div class="listContent CanoePolo PAID">
+                    <div class="dateEvent eventCell">23-24</div>
+                    <div class="nameEvent eventCell ">
+                        <a href="#">Кануполо <!--<sup>i</sup>--></a>
+                        <br> 
+                        <span class="mobOrgEvent">Клуб "Байдарка"</span>
+                        <!-- <button id="showbtnFest">раск</button> -->
+                    </div>
+                    <div class="orgEvent eventCell">Федерація Кануполо</div>
+                    <div class="locEvent eventCell">Київ</div>
+                </div><!--CanoePolo end--> 
+       
             </div> 
             <!--LIST EVENT end-->
 
@@ -335,96 +345,246 @@
             </div>
 
             <!--LIST EVENT-->
-            <div class="list-event">
+            <div class="listEvent">
+                         
+                    <!--Фест водного спорту-->
+                    <div class="listContent FestVodnyiSports">
+                        <div class="dateEvent eventCell">15-16 </div>
+                        <div class="nameEvent eventCell">Фестиваль Водних Видів Спорту 
+                            <br> 
+                            <span class="mobOrgEvent">Клуб "Байдарка"</span>
+                            <!-- <button id="showbtnFest">раск</button> -->
+                        </div>
+                        <div class="orgEvent eventCell">-</div>
+                        <div class="locEvent eventCell">Одеса</div>
+                    </div><!--Фест водного спорту end-->
+                        <!-- <div class="outFest">
+                            <p >Lorem ipsum dolor sit amet consectetur <br>
+                                Lorem ipsum dolor sit amet consectetur <br>
+                                Lorem ipsum dolor sit amet consectetur <br>
+                                Lorem ipsum dolor sit amet consectetur <br>
+                            </p>
+                        </div> -->
+    
+                    <!--ARHIPELAG-->
+                    <div class="listContent  arhipelag PAID">
+                        <div class="dateEvent eventCell">01-03</div>                        
+                        <div class="nameEvent eventCell ">
+                             <a href="#">Архіпелаг-О</a>
+                             <br> 
+                            <span class="mobOrgEvent">Клуб "Байдарка"</span>
+                            <!-- <button id="showbtnFest">раск</button> -->
+                            <!-- <button id="showbtnArchipelag">раск</button> -->
+                        </div>
+                        <div class="orgEvent eventCell">Life-n-Action</div>
+                        <div class="locEvent eventCell">Камінець- Подільський</div>
+                    </div> <!--ARHIPELAG end-->  
+                    <!-- <div class="out ">
+                        <p >Lorem ipsum dolor sit amet consectetur <br>
+                            Lorem ipsum dolor sit amet consectetur <br>
+                            Lorem ipsum dolor sit amet consectetur <br>
+                            Lorem ipsum dolor sit amet consectetur <br>
+                        </p>
+                    </div> -->
+                                
+    
+                    <!--CanoePolo-->
+                    <div class="listContent CanoePolo PAID">
+                        <div class="dateEvent eventCell">23-24</div>
+                        <div class="nameEvent eventCell ">
+                            <a href="#">Кануполо <!--<sup>i</sup>--></a>
+                            <br> 
+                            <span class="mobOrgEvent">Клуб "Байдарка"</span>
+                            <!-- <button id="showbtnFest">раск</button> -->
+                        </div>
+                        <div class="orgEvent eventCell">Федерація Кануполо</div>
+                        <div class="locEvent eventCell">Київ</div>
+                    </div><!--CanoePolo end--> 
+           
+                </div> 
+                <!--LIST EVENT end-->
+            <!--LIST EVENT end--> 
 
-                        <div class="wakeboarding-section"><!--Wakeboarding section--> 
-                            
-            
-                            <div class=" list-content list-item NAMEevent"><!--NAMEevent-->
-                                <div class="date event-cell_item">01-02 </div>
-                                <div class="name-event event-cell_item">Kyiv spring chalenge</div>
-                                <div class="organizer event-cell_item">Wakeboard Federation</div>
-                                <div class="location event-cell_item">Київ</div>
-                            </div><!--NAMEevent end-->
-
-                            <div class=" list-content list-item NAMEevent"><!--NAMEevent-->
-                                <div class="date event-cell_item">01-02 </div>
-                                <div class="name-event event-cell_item">Dnipro spring chalenge</div>
-                                <div class="organizer event-cell_item">Dnipro Wake Club</div>
-                                <div class="location event-cell_item">Дніпро</div>
-                            </div><!--NAMEevent end-->
-
-                            <div class=" list-content list-item NAMEevent"><!--NAMEevent-->
-                                <div class="date event-cell_item">06-07 </div>
-                                <div class="name-event event-cell_item">Equity Kyiv Wake Open</div>
-                                <div class="organizer event-cell_item">Adrenalin</div>
-                                <div class="location event-cell_item">Київ</div>
-                            </div><!--NAMEevent end-->
-
-                            <div class=" list-content list-item NAMEevent"><!--NAMEevent-->
-                                <div class="date event-cell_item">14-15 </div>
-                                <div class="name-event event-cell_item">Kyiv Surf Fest</div>
-                                <div class="organizer event-cell_item">X-Park WakeComunity</div>
-                                <div class="location event-cell_item">Київ</div>
-                            </div><!--NAMEevent end-->
-
-                            <div class=" list-content list-item NAMEevent"><!--NAMEevent-->
-                                <div class="date event-cell_item">14-15 </div>
-                                <div class="name-event event-cell_item">Adrenalin Wakesurf Open 2018</div>
-                                <div class="organizer event-cell_item">Adrenalin</div>
-                                <div class="location event-cell_item">Київ</div>
-                            </div><!--NAMEevent end-->
-                            <div class=" list-content list-item NAMEevent"><!--NAMEevent-->
-                                <div class="date event-cell_item">14-15 </div>
-                                <div class="name-event event-cell_item">Equity Ukraine Wake Open </div>
-                                <div class="organizer event-cell_item">-</div>
-                                <div class="location event-cell_item">Київ</div>
-                            </div><!--NAMEevent end-->
-            
-                            <div class=" list-content list-item NAMEevent"><!--NAMEevent-->
-                                <div class="date event-cell_item">19-20 </div>
-                                <div class="name-event event-cell_item">Poltava Wake Up</div>
-                                <div class="organizer event-cell_item">Wakeboard Federation</div>
-                                <div class="location event-cell_item">Полтава</div>
-                            </div><!--NAMEevent end-->
-                            <div class=" list-content list-item NAMEevent"><!--NAMEevent-->
-                                <div class="date event-cell_item">19-20 </div>
-                                <div class="name-event event-cell_item">Kharkiv Wake Cup</div>
-                                <div class="organizer event-cell_item">Wakeboard Federation</div>
-                                <div class="location event-cell_item">Харків</div>
-                            </div><!--NAMEevent end-->
-                            <div class=" list-content list-item NAMEevent"><!--NAMEevent-->
-                                <div class="date event-cell_item">19-20 </div>
-                                <div class="name-event event-cell_item">Vinnitsa Wake Cup Open</div>
-                                <div class="organizer event-cell_item">Wakeboard Federation</div>
-                                <div class="location event-cell_item">Вінниця</div>
-                            </div><!--NAMEevent end-->
-                            <div class=" list-content list-item NAMEevent"><!--NAMEevent-->
-                                <div class="date event-cell_item">29-30 </div>
-                                <div class="name-event event-cell_item">Kryvyi Rig Wake Cup</div>
-                                <div class="organizer event-cell_item">Wakeboard Federation</div>
-                                <div class="location event-cell_item">Кривий Ріг</div>
-                            </div><!--NAMEevent end-->
-                            <div class=" list-content list-item NAMEevent"><!--NAMEevent-->
-                                <div class="date event-cell_item">29-30</div>
-                                <div class="name-event event-cell_item">Kamenske Wake Cup</div>
-                                <div class="organizer event-cell_item">Wakeboard Federation</div>
-                                <div class="location event-cell_item">Кам'янське</div>
-                            </div><!--NAMEevent end-->
-                        </div><!--Wakeboarding section end-->
-                        
-
+            <div class="month">
+                <p>Травень</p>
             </div>
+
+            <!--LIST EVENT-->
+            <div class="listEvent">
+
+                    <!--Фест водного спорту-->
+                    <div class="listContent FestVodnyiSports">
+                        <div class="dateEvent eventCell">15-16 </div>
+                        <div class="nameEvent eventCell">Фестиваль Водних Видів Спорту 
+                            <br> 
+                            <span class="mobOrgEvent">Клуб "Байдарка"</span>
+                            <!-- <button id="showbtnFest">раск</button> -->
+                        </div>
+                        <div class="orgEvent eventCell">-</div>
+                        <div class="locEvent eventCell">Одеса</div>
+                    </div><!--Фест водного спорту end-->
+                        <!-- <div class="outFest">
+                            <p >Lorem ipsum dolor sit amet consectetur <br>
+                                Lorem ipsum dolor sit amet consectetur <br>
+                                Lorem ipsum dolor sit amet consectetur <br>
+                                Lorem ipsum dolor sit amet consectetur <br>
+                            </p>
+                        </div> -->
+
+                    <!--ARHIPELAG-->
+                    <div class="listContent  arhipelag PAID">
+                        <div class="dateEvent eventCell">01-03</div>                        
+                        <div class="nameEvent eventCell ">
+                            <a href="#">Архіпелаг-О</a>
+                            <br> 
+                            <span class="mobOrgEvent">Клуб "Байдарка"</span>
+                            <!-- <button id="showbtnFest">раск</button> -->
+                            <!-- <button id="showbtnArchipelag">раск</button> -->
+                        </div>
+                        <div class="orgEvent eventCell">Life-n-Action</div>
+                        <div class="locEvent eventCell">Камінець- Подільський</div>
+                    </div> <!--ARHIPELAG end-->  
+                    <!-- <div class="out ">
+                        <p >Lorem ipsum dolor sit amet consectetur <br>
+                            Lorem ipsum dolor sit amet consectetur <br>
+                            Lorem ipsum dolor sit amet consectetur <br>
+                            Lorem ipsum dolor sit amet consectetur <br>
+                        </p>
+                    </div> -->
+                                
+
+                    <!--CanoePolo-->
+                    <div class="listContent CanoePolo PAID">
+                        <div class="dateEvent eventCell">23-24</div>
+                        <div class="nameEvent eventCell ">
+                            <a href="#">Кануполо <!--<sup>i</sup>--></a>
+                            <br> 
+                            <span class="mobOrgEvent">Клуб "Байдарка"</span>
+                            <!-- <button id="showbtnFest">раск</button> -->
+                        </div>
+                        <div class="orgEvent eventCell">Федерація Кануполо</div>
+                        <div class="locEvent eventCell">Київ</div>
+                    </div><!--CanoePolo end--> 
+                    <!--Фест водного спорту-->
+                    <div class="listContent FestVodnyiSports">
+                        <div class="dateEvent eventCell">15-16 </div>
+                        <div class="nameEvent eventCell">Фестиваль Водних Видів Спорту 
+                            <br> 
+                            <span class="mobOrgEvent">Клуб "Байдарка"</span>
+                            <!-- <button id="showbtnFest">раск</button> -->
+                        </div>
+                        <div class="orgEvent eventCell">-</div>
+                        <div class="locEvent eventCell">Одеса</div>
+                    </div><!--Фест водного спорту end-->
+                        <!-- <div class="outFest">
+                            <p >Lorem ipsum dolor sit amet consectetur <br>
+                                Lorem ipsum dolor sit amet consectetur <br>
+                                Lorem ipsum dolor sit amet consectetur <br>
+                                Lorem ipsum dolor sit amet consectetur <br>
+                            </p>
+                        </div> -->
+
+                    <!--ARHIPELAG-->
+                    <div class="listContent  arhipelag PAID">
+                        <div class="dateEvent eventCell">01-03</div>                        
+                        <div class="nameEvent eventCell ">
+                            <a href="#">Архіпелаг-О</a>
+                            <br> 
+                            <span class="mobOrgEvent">Клуб "Байдарка"</span>
+                            <!-- <button id="showbtnFest">раск</button> -->
+                            <!-- <button id="showbtnArchipelag">раск</button> -->
+                        </div>
+                        <div class="orgEvent eventCell">Life-n-Action</div>
+                        <div class="locEvent eventCell">Камінець- Подільський</div>
+                    </div> <!--ARHIPELAG end-->  
+                    <!-- <div class="out ">
+                        <p >Lorem ipsum dolor sit amet consectetur <br>
+                            Lorem ipsum dolor sit amet consectetur <br>
+                            Lorem ipsum dolor sit amet consectetur <br>
+                            Lorem ipsum dolor sit amet consectetur <br>
+                        </p>
+                    </div> -->
+                                
+
+                    <!--CanoePolo-->
+                    <div class="listContent CanoePolo PAID">
+                        <div class="dateEvent eventCell">23-24</div>
+                        <div class="nameEvent eventCell ">
+                            <a href="#">Кануполо <!--<sup>i</sup>--></a>
+                            <br> 
+                            <span class="mobOrgEvent">Клуб "Байдарка"</span>
+                            <!-- <button id="showbtnFest">раск</button> -->
+                        </div>
+                        <div class="orgEvent eventCell">Федерація Кануполо</div>
+                        <div class="locEvent eventCell">Київ</div>
+                    </div><!--CanoePolo end--> 
+
+                    <!--Фест водного спорту-->
+                    <div class="listContent FestVodnyiSports">
+                        <div class="dateEvent eventCell">15-16 </div>
+                        <div class="nameEvent eventCell">Фестиваль Водних Видів Спорту 
+                            <br> 
+                            <span class="mobOrgEvent">Клуб "Байдарка"</span>
+                            <!-- <button id="showbtnFest">раск</button> -->
+                        </div>
+                        <div class="orgEvent eventCell">-</div>
+                        <div class="locEvent eventCell">Одеса</div>
+                    </div><!--Фест водного спорту end-->
+                        <!-- <div class="outFest">
+                            <p >Lorem ipsum dolor sit amet consectetur <br>
+                                Lorem ipsum dolor sit amet consectetur <br>
+                                Lorem ipsum dolor sit amet consectetur <br>
+                                Lorem ipsum dolor sit amet consectetur <br>
+                            </p>
+                        </div> -->
+
+                    <!--ARHIPELAG-->
+                    <div class="listContent  arhipelag PAID">
+                        <div class="dateEvent eventCell">01-03</div>                        
+                        <div class="nameEvent eventCell ">
+                            <a href="#">Архіпелаг-О</a>
+                            <br> 
+                            <span class="mobOrgEvent">Клуб "Байдарка"</span>
+                            <!-- <button id="showbtnFest">раск</button> -->
+                            <!-- <button id="showbtnArchipelag">раск</button> -->
+                        </div>
+                        <div class="orgEvent eventCell">Life-n-Action</div>
+                        <div class="locEvent eventCell">Камінець- Подільський</div>
+                    </div> <!--ARHIPELAG end-->  
+                    <!-- <div class="out ">
+                        <p >Lorem ipsum dolor sit amet consectetur <br>
+                            Lorem ipsum dolor sit amet consectetur <br>
+                            Lorem ipsum dolor sit amet consectetur <br>
+                            Lorem ipsum dolor sit amet consectetur <br>
+                        </p>
+                    </div> -->
+                                
+
+                    <!--CanoePolo-->
+                    <div class="listContent CanoePolo PAID">
+                        <div class="dateEvent eventCell">23-24</div>
+                        <div class="nameEvent eventCell ">
+                            <a href="#">Кануполо <!--<sup>i</sup>--></a>
+                            <br> 
+                            <span class="mobOrgEvent">Клуб "Байдарка"</span>
+                            <!-- <button id="showbtnFest">раск</button> -->
+                        </div>
+                        <div class="orgEvent eventCell">Федерація Кануполо</div>
+                        <div class="locEvent eventCell">Київ</div>
+                    </div><!--CanoePolo end--> 
+        
+                </div> 
+                <!--LIST EVENT end-->
             <!--LIST EVENT end--> 
         </section> 
-    <!--End main-Events-->
+            <!--End main-Events-->
 
     </main>
 
     <footer class="footer">
-        <section> Веб-розробка IT schooll "Frontend-Science"</section>
-        <section> Лого-розробка у студії Kovalen.com</section>
-        <section></section>
+        <!-- <section> Веб-розробка: IT schooll "Frontend-Science"</section>
+        <section> Розробка лого і промо картинок: Студія Kovalen.com</section> -->
+        <section>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Provident, eligendi et esse autem tempore suscipit expedita reprehenderit nemo corrupti ratione quidem voluptas, minima sed quaerat error officia velit tempora quisquam.</section>
     </footer>
           
 </div> <!--End container-->
