@@ -121,7 +121,7 @@ body{
 .month{
 	text-transform: uppercase;
 	text-decoration: underline ;
-	color: var(--main-color);
+	color: var(--main-color_white);
 	margin: 5px 0;
 }
 
@@ -385,6 +385,7 @@ footer{
 			display: flex;
 			flex-direction: row-reverse;
 			justify-content: space-between;
+			margin-top: 10px;
 		}
 		.sponsorsLogoMob{
 			display: none;
@@ -399,7 +400,7 @@ footer{
 /*Sponsor*/
 		.sponsorsLogo img{
 			width: 100%;
-			border: 1px solid var(--main--bg_light);
+		
 		}
 		.sponsorItem{
 			margin-bottom: 10px;
@@ -407,15 +408,21 @@ footer{
 /*Nav*/	
 		nav{
 			width: 100%;
-			background: rgba(255, 255, 255, 0.281);
-			border: 1px solid var(--main--bg_light);
+			background: var(--main--bg_light);
 		}
 		.navMenu{
 			display: flex;
 		}
 		.navItem{
-			border: 1px solid var(--main--bg_light);
-			border-left: none;
+			width: 150px;
+		}
+		.navItem:nth-child(2n){
+			align-items: center;
+			background:#fcfcfc02;
+		}
+		.navItem:nth-child(2n+1){
+			align-items: center;
+			background:#18386710;	
 		}
 	
 /*Filters*/
@@ -456,7 +463,7 @@ footer{
 
 .listEvent{
 	color: var(--main-color_white);
-	border: 1px solid var(--main--bg_light);
+
 }
 .listEvent a,
 .listEvent a:active{
@@ -466,7 +473,6 @@ footer{
 .listContent{
 	display: flex;
 	width: 100%;
-	border-bottom: 1px solid gray;
 	padding: 2px 0;
 }
 .listHead{
@@ -479,6 +485,14 @@ footer{
 .listContent{
 	height: 40px;
 	align-items: center;
+}
+.listContent:nth-child(2n){
+	align-items: center;
+	background:#fcfcfc10;
+}
+.listContent:nth-child(2n+1){
+	align-items: center;
+	background:#18386733;	
 }
 .dateEvent{
 	min-width: 50px;
