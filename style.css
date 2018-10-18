@@ -375,14 +375,12 @@ footer{
 			width: 23%;
 		}
 		header .logo{
-			width: 50%;
-		}
-		header .headerMenu{
 			width: 23%;
 		}
-		.header .logo{
+		header .headerMenu{
 			width: 50%;
 		}
+		
 		.header .logo img{
 			width: 140px;
 			margin: 5px 0 0 5px;
