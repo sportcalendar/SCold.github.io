@@ -371,10 +371,14 @@ footer{
 			align-items: center;
 			justify-content: flex-start;
 		}
-		header .headerSocialMenu,
-		header .logo,
+		header .headerSocialMenu{
+			width: 23%;
+		}
+		header .logo{
+			width: 50%;
+		}
 		header .headerMenu{
-		width: 33%;
+			width: 23%;
 		}
 		.header .logo{
 			width: 50%;
