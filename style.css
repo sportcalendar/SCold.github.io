@@ -370,15 +370,16 @@ footer{
 			display: flex;
 			align-items: center;
 			justify-content: flex-start;
-		}
-		header .headerSocialMenu{
-			width: 17%;
+			font-size: .9em
 		}
 		header .logo{
-			width: 13%;
+			width: 16%;
+		}
+		header .headerSocialMenu{
+			width: 12%;
 		}
 		header .headerMenu{
-			width: 67%;
+			width: 70%;
 		}
 		
 		.header .logo img{
