@@ -1,417 +1,742 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>SportCalendar</title>
-    <link rel="stylesheet" href="style.css">
-    
-</head>
-<body>
-    
-<div class="container">
+:root{
+	--main-color: #183867;
+	--main-color_white:rgb(247, 245, 245);
+	--main--bg_light:rgba(255, 255, 255, 0.9215686274509803);
+	--border-color_grey: rgba(216, 197, 197, 0.32);
+}
+*{
+	box-sizing: border-box;
+	font-family: "Helvetica", Arial, sans-serif;
+	text-decoration: none;
+	padding: 0;
+	margin: 0;
+}
+header a:focus,
+header a:hover{
+	border-bottom: 1px solid var(--main-color);
+}
+header a,
+header a:visited,
+header a:active{
+	color: var(--main-color);
+	font-weight: bold;
+}
+.logo:focus,
+.logo:hover{
+	border: none;
+}
+body{
+	 background-image: linear-gradient(to top, rgba(30,87,153,0), rgba(30,87,153,0.8), rgba(30,87,153,1),
+		rgba(30,87,153,1), rgba(41,137,216,1), rgba(30,87,153,1), rgba(30,87,153,1),
+		rgba(30,87,153,0.8),rgba(30,87,153,0));
+}
+.mainLine{
+	border: none;
+	background-color: var(--main-color);
+	height: 1px;
+}
 
-    <header class="header">  
-            <a href="#" class="logo">
-                <img src="img/SC_logo_vert.svg"  alt="">
-            </a>
-            
-            <div class="headerMenu">
-                <a href="#" class="social-item">КАЛЕНДАР</a>
-                <a href="#" class="social-item">ТУРИ</a>
-                <a href="#" class="social-item">КЛУБИ\СЕКЦІЇ</a>
-                <a href="#" class="social-item">СПОРТОБЄКТИ</a>
-                <a href="#" class="social-item">МАГАЗИНИ\ПРОКАТИ</a>
-                <a href="#" class="social-item">РОБОТА</a>
-                <a href="#" class="social-item">ФОРУМ</a>
-                
-            </div>
-            
-            <div class="headerSocialMenu">
-                <a href="#" class="social-item">Fb</a>
-                <a href="#" class="social-item">Tlg</a>
-                <a href="#" class="social-item">In</a>
-            </div>
-            
-    </header>
- 
-    <header class="headerMob">
-        
-        <a href="#" class="logo">
-            <img src="img/SC_logo_vert.svg"  alt="">
-        </a>
-        
-        <div class="headerMenu">
-            <a href="forms" class="social-item">ОРГАНІЗАТОРАМ</a>
-        </div>
-    </header> 
+/*---MOBILE---*/
+@media (max-width: 640px){
+	
+.container{
+	padding: 5px;
+}
+.header{
+  display: none;
+}
+.headerMob{
+  display: flex;  
+	align-items: center;  
+	justify-content: space-between;
+	color: var(--main-color);
+	font-size: 15px;
+}
+  .headerMob .logo img{
+		width: 140px;
+		margin: 5px 0 0 5px;
+	}
+	.headerSocialMenu{
+		display: flex;
+		justify-content: space-around;
+	}
+	header .headerSocialMenu,
+	header .logo{
+  width: 45%;
+}
+.title{
+	display: none;
+}
 
-    <!-- <h1 class="title">Аматорські спортивні події в Україні 2018</h1> -->
-    <main>
-    <!-- SPONSOR section -->
-        <section class="sponsorsLogo">
-            <div class="sponsorItem borika">
-                <a href="http://borika.ua/">
-                    <img src="img/sponsors/borika.png" alt="">
-                    
-                </a>
-            </div>        
-            <div class="sponsorItem rapid">
-                <a href="http://rapid.net.ua/">
-                    <img src="img/sponsors/rapid.png" alt="">
-                    
-                </a>
-            </div>
-            <div class="sponsorItem neris">
-                <a href="http://www.neris.ua/">
-                    <img src="img/sponsors/neris.png" alt="">
-                    
-                </a>
-            </div>     
-            <div class="sponsorItem kolibri">
-                <a href="http://www.kolibriboats.com/">
-                    <img src="img/sponsors/kolibri.png" alt="">
-                    
-                </a>
-            </div>
-            <div class="sponsorItem ordana">
-                <a href="http://www.ordana.com/?l=ua">
-                    <img src="img/sponsors/ordana.png" alt="">
-                    
-                </a>
-            </div>
-        </section>  
-        
-        
-   <!--end SPONSOR section -->
+/*---MAIN---*/
+ main{
+   display: flex;
+   flex-direction: column;
+ }
+	.sponsorsLogo{
+		display: none;
+	}
+		.sponsorsLogoMob{
+			display: flex;
+			overflow: scroll;
+		}
+		.sponsorsLogoMob img{
+			width: 100px;
+			margin: 0 5px 0 0;
+		}
+			/*Title*/
+			.titleMob{
+				font-size: 24px;
+				text-align: center;
+				color: var(--main-color_white);
+			}
+		/*Nav*/	
+		nav{
+			width: 100%;
+			overflow: scroll;
+			background: var(--main--bg_light);
+			margin: 10px 0;
+		}
+		.navMenu{
+			display: flex;
+		}
+		
+		.navItem:nth-child(2n){
+			align-items: center;
+			background:#fcfcfc02;
+		}
+		.navItem:nth-child(2n+1){
+			align-items: center;
+			background:#18386710;	
+		}
 
-       
+		/*Filters*/
+		.filterMenu{
+			display: flex;
+			justify-content: space-between;
+			padding: 10px 0;
+			color: var(--main-color_white);
+		}
+		.filterItem{
+			width: 30%;
+			
+		}
+		select{
+			width: 100%;
+			color: var(--main-color);
+			font-weight: 700;
+		}
 
-    <!--main-Events-->
-        <section class="eventSection">
+/*--EVENT--*/
+.month{
+	text-transform: uppercase;
+	text-decoration: underline ;
+	color: var(--main-color_white);
+	margin: 15px 0;
+}
 
-            <!-- NAVIGATION -->
-            <nav>
-                <div class="navMenu">
-                        
-                        <div class="navItem ">
-                            <img src="img/social-icons/kayaking.png" alt="">
-                        </div>
-                        <div class="navItem ">
-                            <img src="img/social-icons/sup.png" alt="">
-                        </div>
-                        <div class="navItem ">
-                            <img src="img/social-icons/rafting.png" alt="">
-                        </div>
-                        <div class="navItem ">
-                            <img src="img/social-icons/surf.png" alt="">
-                        </div>
-                        <div class="navItem ">
-                            <img src="img/social-icons/sailing.png" alt="">
-                        </div>
-                        <div class="navItem ">
-                            <img src="img/social-icons/kiter2.png" alt="">
-                        </div>
-                        <div class="navItem ">
-                            <img src="img/social-icons/wake.png" alt="">
-                        </div>
-                        <div class="navItem ">
-                            <img src="img/social-icons/waterskiing.png" alt="">
-                        </div>
-                        <div class="navItem ">
-                            <img src="img/social-icons/sup.png" alt="">
-                        </div>
-                        <div class="navItem ">
-                            <img src="img/social-icons/kayaking.png" alt="">
-                        </div>
-                        
-                </div>
-            </nav>
-            <!-- NAVIGATION end-->
+.listEvent{
+	color: var(--main-color_white);
+}
+.listEvent a,
+.listEvent a:active{
+	color: var(--main-color_white);
+}
+.listHead,
+.listContent{
+	display: flex;
+	width: 100%;
+	padding: 5px;
+}
+.listContent{
+	height: 45px;
+}
+.listContent .nameEvent{
+	font-size: 0.83em;
+}
+.listContent:nth-child(2n){
+	align-items: center;
+	background:#fcfcfc17;
+}
+.listContent:nth-child(2n+1){
+	align-items: center;
+	background:#18386710;	
+}
 
-            <!-- FILTERS -->
-            <div class="filterMenu">
-                    <div class="locEventFilter  filterItem">
-                        <label for="">Локація</label>
-                        <select>
-                            <option>Дніпро</option>
-                            <option>Вінниця</option>
-                            <option selected>Київ</option>
-                            <option>Харків</option>
-                            <option>Черкаси</option>
-                        </select>
-                    </div>
-                    
-                    <div class="CategoryFilter filterItem">
-                        <label for="">Спорт</label>
-                        <select>
-                            <option>Вейкбордінг</option>
-                            <option>САПбордінг</option>
-                            <option selected>Каякінг</option>
-                            <option>Кайтсьорфінг</option>
-                            <option>Віндсьорфінг</option>
-                        </select>
-                    </div>
-                    
-                    <div class="dateEventFilter filterItem">
-                        <label for="">Місяць</label>
-                        <select>
-                            <option>Квітень</option>
-                            <option>Травень</option>
-                            <option selected>Листопад</option>
-                            <option>Грудень</option>
-                            <option>Січень</option>
-                        </select>
-                    </div>
-            </div> 
-            <!-- FILTERS end-->
-
-            <div class="month">
-                <p>Квітень</p>
-            </div>
-
-            <!--LIST EVENT-->
-            <div class="listEvent">                   
-
-            <!--Header Content-->
-                <div class="listHead  ">
-                    <div class="dateEvent eventCell">дата</div>
-                    <div class="nameEvent eventCell">назва події</div>
-                    <div class="orgEvent eventCell">організатор</div>
-                    <div class="locEvent eventCell">Локація</div>
-                 </div>  
-            <!--Header Content-->
-                     
-                <!--Фест водного спорту-->
-                <div class="listContent FestVodnyiSports">
-                    <div class="dateEvent eventCell">15-16 </div>
-                    <div class="nameEvent eventCell">
-                        <a href="https://eventpage.github.io/" target="_blank">Фестиваль Водних Видів Спорту </a>
-                    </div>
-                    <div class="orgEvent eventCell">-</div>
-                    <div class="locEvent eventCell">Одеса</div>
-                </div><!--Фест водного спорту end-->
-
-                <!--ARHIPELAG-->
-                <div class="listContent  arhipelag PAID">
-                    <div class="dateEvent eventCell">01-03</div>                        
-                    <div class="nameEvent eventCell ">
-                         <a href="https://eventpage.github.io/" target="_blank">Архіпелаг-О</a>        
-                    </div>
-                    <div class="orgEvent eventCell">Life-n-Action</div>
-                    <div class="locEvent eventCell">Камінець-Подільський</div>
-                </div> <!--ARHIPELAG end-->  
-                               
-                <!--CanoePolo-->
-                <div class="listContent CanoePolo PAID">
-                    <div class="dateEvent eventCell">23-24</div>
-                    <div class="nameEvent eventCell ">
-                        <a href="https://eventpage.github.io/ " target="_blank">Кануполо </a>
-                    </div>
-                    <div class="orgEvent eventCell">Федерація Кануполо</div>
-                    <div class="locEvent eventCell">Київ</div>
-                </div><!--CanoePolo end--> 
-                
-                <!--Фест водного спорту-->
-                <div class="listContent FestVodnyiSports">
-                    <div class="dateEvent eventCell">15-16 </div>
-                    <div class="nameEvent eventCell">
-                        <a href="https://eventpage.github.io/" target="_blank">Фестиваль Водних Видів Спорту </a>                        
-                    </div>
-                    <div class="orgEvent eventCell">-</div>
-                    <div class="locEvent eventCell">Одеса</div>
-                </div>
-
-                <!--ARHIPELAG-->
-                <div class="listContent  arhipelag PAID">
-                    <div class="dateEvent eventCell">01-03</div>                        
-                    <div class="nameEvent eventCell ">
-                         <a href="https://eventpage.github.io/" target="_blank">Архіпелаг-О</a>                                 
-                    </div>
-                    <div class="orgEvent eventCell">Life-n-Action</div>
-                    <div class="locEvent eventCell">Камінець- Подільський</div>
-                </div> 
-                            
-                <!--CanoePolo-->
-                <div class="listContent CanoePolo PAID">
-                    <div class="dateEvent eventCell">23-24</div>
-                    <div class="nameEvent eventCell ">
-                        <a href="https://eventpage.github.io/" target="_blank">Кануполо </a>                    
-                    </div>
-                    <div class="orgEvent eventCell">Федерація Кануполо</div>
-                    <div class="locEvent eventCell">Київ</div>
-                </div><!--CanoePolo end--> 
-       
-            </div> 
-            <!--LIST EVENT end-->
-
-            <div class="month">
-                <p>Травень</p>
-            </div>
-
-            <!--LIST EVENT-->
-            <div class="listEvent">
-                         
-                    <!--Фест водного спорту-->
-                    <div class="listContent FestVodnyiSports">
-                        <div class="dateEvent eventCell">15-16 </div>
-                        <div class="nameEvent eventCell">
-                            <a href="https://eventpage.github.io/" target="_blank">Фестиваль Водних Видів Спорту </a>                            
-                        </div>
-                        <div class="orgEvent eventCell">-</div>
-                        <div class="locEvent eventCell">Одеса</div>
-                    </div><!--Фест водного спорту end-->
-                    
-    
-                    <!--ARHIPELAG-->
-                    <div class="listContent  arhipelag PAID">
-                        <div class="dateEvent eventCell">01-03</div>                        
-                        <div class="nameEvent eventCell ">
-                             <a href="https://eventpage.github.io/" target="_blank">Архіпелаг-О</a>                            
-                        </div>
-                        <div class="orgEvent eventCell">Life-n-Action</div>
-                        <div class="locEvent eventCell">Камінець- Подільський</div>
-                    </div> <!--ARHIPELAG end-->  
-                    
-                                
-    
-                    <!--CanoePolo-->
-                    <div class="listContent CanoePolo PAID">
-                        <div class="dateEvent eventCell">23-24</div>
-                        <div class="nameEvent eventCell ">
-                            <a href="https://eventpage.github.io/" target="_blank">Кануполо </a>                            
-                        </div>
-                        <div class="orgEvent eventCell">Федерація Кануполо</div>
-                        <div class="locEvent eventCell">Київ</div>
-                    </div><!--CanoePolo end--> 
-           
-                </div> 
-                <!--LIST EVENT end-->
-        
-
-            <div class="month">
-                <p>Травень</p>
-            </div>
-
-            <!--LIST EVENT-->
-            <div class="listEvent">
-
-                    <!--Фест водного спорту-->
-                    <div class="listContent FestVodnyiSports">
-                        <div class="dateEvent eventCell">15-16 </div>
-                        <div class="nameEvent eventCell">
-                            <a href="https://eventpage.github.io/" target="_blank">Фестиваль Водних Видів Спорту </a>                
-                        </div>
-                        <div class="orgEvent eventCell">-</div>
-                        <div class="locEvent eventCell">Одеса</div>
-                    </div><!--Фест водного спорту end-->
-                        
-
-                    <!--ARHIPELAG-->
-                    <div class="listContent  arhipelag PAID">
-                        <div class="dateEvent eventCell">01-03</div>                        
-                        <div class="nameEvent eventCell ">
-                            <a href="https://eventpage.github.io/" target="_blank">Архіпелаг-О</a>               
-                        </div>
-                        <div class="orgEvent eventCell">Life-n-Action</div>
-                        <div class="locEvent eventCell">Камінець- Подільський</div>
-                    </div> <!--ARHIPELAG end-->  
-                    
-                                
-
-                    <!--CanoePolo-->
-                    <div class="listContent CanoePolo PAID">
-                        <div class="dateEvent eventCell">23-24</div>
-                        <div class="nameEvent eventCell ">
-                            <a href="https://eventpage.github.io/" target="_blank">Кануполо</a>                            
-                        </div>
-                        <div class="orgEvent eventCell">Федерація Кануполо</div>
-                        <div class="locEvent eventCell">Київ</div>
-                    </div><!--CanoePolo end-->
-
-                    <!--Фест водного спорту-->
-                    <div class="listContent FestVodnyiSports">
-                        <div class="dateEvent eventCell">15-16 </div>
-                        <div class="nameEvent eventCell">
-                            <a href="https://eventpage.github.io/" target="_blank">Фестиваль Водних Видів Спорту </a>                            
-                        </div>
-                        <div class="orgEvent eventCell">-</div>
-                        <div class="locEvent eventCell">Одеса</div>
-                    </div><!--Фест водного спорту end-->
-                        
-
-                    <!--ARHIPELAG-->
-                    <div class="listContent  arhipelag PAID">
-                        <div class="dateEvent eventCell">01-03</div>                        
-                        <div class="nameEvent eventCell ">
-                            <a href="https://eventpage.github.io/" target="_blank">Архіпелаг-О</a>   
-                        </div>
-                        <div class="orgEvent eventCell">Life-n-Action</div>
-                        <div class="locEvent eventCell">Камінець- Подільський</div>
-                    </div> <!--ARHIPELAG end-->  
-                   
-                                
-
-                    <!--CanoePolo-->
-                    <div class="listContent CanoePolo PAID">
-                        <div class="dateEvent eventCell">23-24</div>
-                        <div class="nameEvent eventCell ">
-                            <a href="https://eventpage.github.io/" target="_blank">Кануполо </a>                            
-                        </div>
-                        <div class="orgEvent eventCell">Федерація Кануполо</div>
-                        <div class="locEvent eventCell">Київ</div>
-                    </div><!--CanoePolo end--> 
-
-                    <!--Фест водного спорту-->
-                    <div class="listContent FestVodnyiSports">
-                        <div class="dateEvent eventCell">15-16 </div>
-                        <div class="nameEvent eventCell">
-                            <a href="https://eventpage.github.io/" target="_blank">Фестиваль Водних Видів Спорту </a>                            
-                        </div>
-                        <div class="orgEvent eventCell">-</div>
-                        <div class="locEvent eventCell">Одеса</div>
-                    </div><!--Фест водного спорту end-->
-                        
-
-                    <!--ARHIPELAG-->
-                    <div class="listContent  arhipelag PAID">
-                        <div class="dateEvent eventCell">01-03</div>                        
-                        <div class="nameEvent eventCell ">
-                            <a href="https://eventpage.github.io/" target="_blank">Архіпелаг-О</a>                            
-                        </div>
-                        <div class="orgEvent eventCell">Life-n-Action</div>
-                        <div class="locEvent eventCell">Камінець- Подільський</div>
-                    </div> <!--ARHIPELAG end-->  
-                    
-                                
-
-                    <!--CanoePolo-->
-                    <div class="listContent CanoePolo PAID">
-                        <div class="dateEvent eventCell">23-24</div>
-                        <div class="nameEvent eventCell ">
-                            <a href="https://eventpage.github.io/" target="_blank">Кануполо <!--<sup>i</sup>--></a>                            
-                        </div>
-                        <div class="orgEvent eventCell">Федерація Кануполо</div>
-                        <div class="locEvent eventCell">Київ</div>
-                    </div><!--CanoePolo end--> 
-        
-                </div> 
-                <!--LIST EVENT end-->
-           
-        </section> 
-            <!--End main-Events-->
-
-    </main>
-
-    <footer class="footer">
-       
-        <section>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Provident, eligendi et esse autem tempore suscipit expedita reprehenderit nemo corrupti ratione quidem voluptas, minima sed quaerat error officia velit tempora quisquam.</section>
-    </footer>
-          
-</div> <!--End container-->
+.listHead{
+	text-transform: uppercase;
+	font-weight: 700;
+	color: var(--main-color);
+	background: var(--main--bg_light);
+}
+.dateEvent{
+	min-width: 45px;
+	width: 13%;
+	text-align: center;
+	align-self: center;
+}
+.nameEvent{
+	min-width: 160px;
+	width: 55%;
+	align-self: center;
+	text-align: left;
+	padding: 0 10px;
+	display: flex;
+	flex-direction: column;
+	text-transform: uppercase;
+}
+.orgEvent{
+	display: none;
+}
+.mobOrgEvent{
+	font-size: 0.8em;
+	align-self:flex-start;
+	text-transform: none;
+}
+.locEvent{
+	min-width: 100px;
+	width: 22%;
+	align-self: center;
+	text-align: left;
+	padding: 0 5px;
+}
+footer{
+	margin: 20px 0;
+	color: var(--main-color);
+}
+}
 
 
-</body>
-</html>
+/*---TABLET---*/
+@media (min-width: 640px) and (max-width: 1020px){
+	.headerMob{
+		display: none;
+	}
+	.header{
+		display: flex;
+		align-items: center;
+		justify-content: flex-start;
+	}
+	header .headerSocialMenu,
+	header .logo,
+	header .headerMenu{
+  width: 33%;
+  
+}
+	.header .logo img{
+		width: 120px;
+		margin: 5px 0 0 5px;
+	}
+	.headerMenu{
+		display: flex;
+		justify-content: space-between;
+	}
+	.headerSocialMenu{
+		display: flex;
+		justify-content: flex-end;
+	}
+	.headerSocialMenu a{
+		margin-right: 5px;
+	}
+
+	.title{
+		display: none;
+	}
+
+	/*---MAIN---*/
+	
+	.sponsorsLogoMob{
+		display: none;
+	}
+	 .sponsorsLogo{
+		 display: flex;
+		 overflow: scroll;
+	 }
+	 .sponsorsLogo img{
+		 width: 97%;
+		 margin-top: 5px;
+	 }
+
+	 /*Title*/
+	.titleMob{
+		font-size: 26px;
+		text-align: center;
+		color: var(--main-color_white);
+	}
+
+	/*Nav*/	
+	nav{
+		width: 100%;
+		overflow: scroll;
+		background: rgba(255, 255, 255, 0.281);
+	}
+	.navMenu{
+		display: flex;
+	}
+	.navItem{
+		border: 1px solid var(--main--bg_light);
+		border-left: none;
+	}
+
+	/*Filters*/
+	.filterMenu{
+		display: flex;
+		justify-content: space-between;
+		margin: 10px 5px;
+		color: var(--main-color_white);
+	}
+	.filterItem{
+		width: 33%;
+		display: flex;
+	}
+	select{
+		color: var(--main-color);
+		font-weight: bolder;
+		width: 50%;
+		text-transform: uppercase;
+	}
+	label{
+		margin-right: 5px;
+	}
+
+	/*--EVENT--*/
+.listEvent{
+	color: var(--main-color_white);
+}
+.listEvent a,
+.listEvent a:active{
+	color: var(--main-color_white);
+}
+.listHead,
+.listContent{
+	display: flex;
+	width: 100%;
+	border-bottom: 1px solid gray;
+	padding: 2px 0;
+}
+.listHead{
+	text-transform: uppercase;
+	font-weight: 700;
+	color: var(--main-color);
+	background: var(--main--bg_light);
+	text-align: center;
+}
+.listContent{
+	height: 40px;
+	align-items: center;
+}
+.dateEvent{
+	min-width: 50px;
+	width: 8%;
+	text-align: center;
+}
+.nameEvent{
+	min-width: 330px;
+	width: 50%;
+	text-transform: uppercase;
+	padding-left: 15px;
+}
+.orgEvent{
+	min-width: 130px;
+	width: 21%;
+	padding-left: 10px;
+}
+.mobOrgEvent{
+	display: none;
+}
+.locEvent{
+	min-width: 130px;
+	width: 21%;
+	padding-left: 10px;
+}
+footer{
+	margin: 20px 0;
+	color: var(--main-color);
+}
+}
+
+/*---DESKTOP---*/
+@media (min-width: 1020px) and (max-width: 1350px){
+	.container{ 
+		width: 1000px;
+		margin: 0 auto;
+		padding: 5px;
+	}
+/*Header*/
+		.headerMob{
+			display: none;
+		}
+		.header{
+			display: flex;
+			align-items: center;
+			justify-content: flex-start;
+			font-size: .9em
+		}
+		header .logo{
+			width: 16%;
+		}
+		header .headerSocialMenu{
+			width: 12%;
+		}
+		header .headerMenu{
+			width: 70%;
+		}
+		
+		.header .logo img{
+			width: 140px;
+			margin: 5px 0 0 5px;
+		}
+		
+		.headerMenu{
+			display: flex;
+			justify-content: space-between;
+		}
+		.headerSocialMenu{
+			display: flex;
+			justify-content: flex-end;
+		}
+		.headerSocialMenu a{
+			margin-right: 15px;
+		}
+
+/*Title*/
+		.titleMob{
+			display: none;
+		}
+		.title{
+			color: var(--main-color);
+		}
+
+/*MAIN*/
+		main{
+			display: flex;
+			flex-direction: row-reverse;
+			justify-content: space-between;
+			margin-top: 10px;
+		}
+		.sponsorsLogoMob{
+			display: none;
+		}
+		.eventSection{
+			width: 650px;
+		}
+		.sponsorsLogo{
+			width: 320px;
+		}
+
+/*Sponsor*/
+		.sponsorsLogo img{
+			width: 100%;
+		
+		}
+		.sponsorItem{
+			margin-bottom: 10px;
+		}
+/*Nav*/	
+		nav{
+			width: 100%;
+			background: var(--main--bg_light);
+		}
+		.navMenu{
+			display: flex;
+		}
+		.navItem{
+			width: 150px;
+		}
+		.navItem:nth-child(2n){
+			align-items: center;
+			background:#fcfcfc02;
+		}
+		.navItem:nth-child(2n+1){
+			align-items: center;
+			background:#18386710;	
+		}
+	
+/*Filters*/
+		.filterMenu{
+			display: flex;
+			justify-content: space-between;
+			margin: 15px 0;
+			color: var(--main-color_white);
+		}
+		.filterItem{
+			width: 33%;
+			display: flex;
+		}
+		.filterItem:nth-child(2){
+			justify-content:center;
+		}
+		.filterItem:last-child{
+			justify-content: flex-end;
+		}
+		select{
+			color: var(--main-color);
+			font-weight: 700;
+			width: 50%;
+			text-transform: uppercase;
+		}
+		label{
+			margin-right: 5px;
+		}
+
+/*--EVENT--*/
+.month{
+	text-transform: uppercase;
+	color: var(--main-color_white);
+	font-weight: bold;
+	margin: 15px 0 10px 0;
+	font-size: 1.2em;
+}
+
+.listEvent{
+	color: var(--main-color_white);
+
+}
+.listEvent a,
+.listEvent a:active{
+	color: var(--main-color_white);
+}
+.listHead,
+.listContent{
+	display: flex;
+	width: 100%;
+	padding: 2px 0;
+}
+.listHead{
+	text-transform: uppercase;
+	font-weight: 700;
+	color: var(--main-color);
+	background: var(--main--bg_light);
+	text-align: center;
+}
+.listContent{
+	height: 40px;
+	align-items: center;
+}
+.listContent:nth-child(2n){
+	align-items: center;
+	background:#fcfcfc10;
+}
+.listContent:nth-child(2n+1){
+	align-items: center;
+	background:#18386733;	
+}
+.dateEvent{
+	min-width: 50px;
+	width: 8%;
+	text-align: center;
+}
+.nameEvent{
+	min-width: 330px;
+	width: 50%;
+	text-transform: uppercase;
+	padding-left: 15px;
+}
+.orgEvent{
+	min-width: 130px;
+	width: 21%;
+	padding-left: 10px;
+}
+.mobOrgEvent{
+	display: none;
+}
+.locEvent{
+	min-width: 130px;
+	width: 21%;
+	padding-left: 10px;
+}
+footer{
+	margin: 20px 0;
+	color: var(--main-color);
+}
+}
+
+
+@media (min-width: 1350px){
+	.container{ 
+		width: 1300px;
+		margin: 0 auto;
+		padding: 5px;
+	}
+/*Header*/
+		.headerMob{
+			display: none;
+		}
+		.header{
+			display: flex;
+			align-items: center;
+			justify-content: flex-start;
+			font-size: .9em
+		}
+		header .logo{
+			width: 16%;
+		}
+		header .headerSocialMenu{
+			width: 12%;
+		}
+		header .headerMenu{
+			width: 70%;
+		}
+		
+		.header .logo img{
+			width: 140px;
+			margin: 5px 0 0 5px;
+		}
+		
+		.headerMenu{
+			display: flex;
+			justify-content: space-between;
+		}
+		.headerSocialMenu{
+			display: flex;
+			justify-content: flex-end;
+		}
+		.headerSocialMenu a{
+			margin-right: 15px;
+		}
+
+/*MAIN*/
+		main{
+			display: flex;
+			flex-direction: row-reverse;
+			justify-content: flex-end;
+			margin-top: 10px;
+		}
+		.sponsorsLogoMob{
+			display: none;
+		}
+		.eventSection{
+			width: 750px;
+		}
+		.sponsorsLogo{
+			width: 370px;
+			margin-left:25px;
+		}
+
+/*Sponsor*/
+		.sponsorsLogo img{
+			width: 100%;
+		
+		}
+		.sponsorItem{
+			margin-bottom: 10px;
+		}
+/*Nav*/	
+		nav{
+			width: 100%;
+			background: var(--main--bg_light);
+		}
+		.navMenu{
+			display: flex;
+		}
+		.navItem{
+			width: 150px;
+		}
+		.navItem:nth-child(2n){
+			align-items: center;
+			background:#fcfcfc02;
+		}
+		.navItem:nth-child(2n+1){
+			align-items: center;
+			background:#18386710;	
+		}
+	
+/*Filters*/
+		.filterMenu{
+			display: flex;
+			justify-content: space-between;
+			margin: 15px 0;
+			color: var(--main-color_white);
+		}
+		.filterItem{
+			width: 33%;
+			display: flex;
+		}
+		.filterItem:nth-child(2){
+			justify-content:center;
+		}
+		.filterItem:last-child{
+			justify-content: flex-end;
+		}
+		select{
+			color: var(--main-color);
+			font-weight: 700;
+			width: 50%;
+			text-transform: uppercase;
+		}
+		label{
+			margin-right: 5px;
+		}
+
+/*--EVENT--*/
+.month{
+	text-transform: uppercase;
+	color: var(--main-color_white);
+	font-weight: bold;
+	margin: 15px 0 10px 0;
+	font-size: 1.2em;
+}
+
+.listEvent{
+	color: var(--main-color_white);
+
+}
+.listEvent a,
+.listEvent a:active{
+	color: var(--main-color_white);
+}
+.listHead,
+.listContent{
+	display: flex;
+	width: 100%;
+	padding: 2px 0;
+}
+.listHead{
+	text-transform: uppercase;
+	font-weight: 700;
+	color: var(--main-color);
+	background: var(--main--bg_light);
+	text-align: center;
+}
+.listContent{
+	height: 40px;
+	align-items: center;
+}
+.listContent:nth-child(2n){
+	align-items: center;
+	background:#fcfcfc10;
+}
+.listContent:nth-child(2n+1){
+	align-items: center;
+	background:#18386733;	
+}
+.dateEvent{
+	min-width: 50px;
+	width: 8%;
+	text-align: center;
+}
+.nameEvent{
+	min-width: 330px;
+	width: 50%;
+	text-transform: uppercase;
+	padding-left: 15px;
+}
+.orgEvent{
+	min-width: 130px;
+	width: 21%;
+	padding-left: 10px;
+}
+.mobOrgEvent{
+	display: none;
+}
+.locEvent{
+	min-width: 130px;
+	width: 21%;
+	padding-left: 10px;
+}
+footer{
+	margin: 20px 0;
+	color: var(--main-color);
+}
+}
 
