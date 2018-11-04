@@ -497,19 +497,15 @@ footer{
 .listContent{
 	display: flex;
 	width: 100%;
+	height: 50px;
 }
 .listHead{
-	height: 50px;
 	text-transform: uppercase;
-	font-weight: 700;
+	font-weight: bold;
 	color: var(--main-color_white);
 	background: #333;
 	font-size: .9em;
 	align-items: center;
-}
-.listContent{
-	height: 50px;
-
 }
 .listContent:nth-child(2n){
 	align-items: center;
@@ -519,30 +515,31 @@ footer{
 	align-items: center;
 	background:#D3D3D3;	
 }
+.eventCell{
+	padding: 20px 0 0 15px;
+	height: 100%;
+}
+.listContent .eventCell{
+	border-right: 2px solid rgb(255, 255, 255);
+}
+
 .dateEvent{
 	min-width: 50px;
 	width: 8%;
-	border-right: 1px solid #183867;
 }
 .nameEvent{
 	min-width: 330px;
 	width: 50%;
 	text-transform: uppercase;
-	font-size: .92em;
 	font-weight: bold;	
-	padding-left: 15px;
-	border-right: 1px solid #183867;
 }
 .orgEvent{
 	min-width: 130px;
-	border-right: 1px solid #183867;
 	width: 21%;
-	padding-left: 10px;
 }
 .locEvent{
 	min-width: 130px;
 	width: 21%;
-	padding-left: 10px;
 }
 
 
