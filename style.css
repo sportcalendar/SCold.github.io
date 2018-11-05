@@ -12,8 +12,8 @@
 	padding: 0;
 	margin: 0;
 }
-header a:focus,
-header a:hover{
+a:focus,
+a:hover{
 	border-bottom: 2px solid var(--main-color_red);
 	color: var(--main-color_red);
 
@@ -367,7 +367,7 @@ footer{
 			display: none;
 		}
 		.headerTop{
-			height: 30px;
+			height: 35px;
 			background: #000;
 			color: var(--main-color_red);
 			font-size: 1.1em;
@@ -423,28 +423,54 @@ footer{
 		}
 
 /*Sponsor*/
+.sponsorsLogo{
+	padding-left: 10px;
+}
+.titleSponsor{
+	height: 50px;
+	color: var(--main-color_grey);
+	font-size: 22px;
+	display: flex;
+	justify-content: flex-end;
+}
+.titleSponsor p{
+	font-weight: bold;
+	display: table;
+	line-height: 30px;	
+	border-bottom: 3px solid var(--main-color_red);
+}
+.sponsorItem{
+	margin-bottom: 10px;
+}
+/*end Sponsor*/
+
 		
 		
 /*Nav*/	
 		nav{
-			width: 100%;
-			background: var(--main--bg_light);
-			height: 60px;		
+			height: 40px;
+			background: var(--main-color_grey);
 		}
 		.navMenu{
 			display: flex;
 		}
 		.navItem{
-			width: 150px;
+			padding: 10px 22px 0 0px;
+			margin-left: 10px;
+			color: var(--main-color_white);
+			font-size: .97em;
+			white-space: nowrap;
+			letter-spacing: 1px;
+		
 		}
-		.navItem:nth-child(2n){
+		/* .navItem:nth-child(2n){
 			align-items: center;
 			background:#E5E5E5;
 		}
 		.navItem:nth-child(2n+1){
 			align-items: center;
 			background:#D3D3D3;
-		}
+		} */
 	
 /*Filters*/
 		.filterMenu{
@@ -466,6 +492,7 @@ footer{
 			height: 25px;
 			width: 200px;
 			border: 1px solid #000000;
+			letter-spacing: 1px;
 		}
 		/* label{
 			margin-right: 5px;
@@ -503,6 +530,7 @@ footer{
 	text-transform: uppercase;
 	font-weight: bold;
 	color: var(--main-color_white);
+	letter-spacing: 1px;
 	background: #333;
 	font-size: .9em;
 	align-items: center;
@@ -532,6 +560,8 @@ footer{
 	width: 50%;
 	text-transform: uppercase;
 	font-weight: bold;	
+}.nameEvent a{
+	width: 100%;
 }
 .orgEvent{
 	min-width: 130px;
@@ -546,10 +576,20 @@ footer{
 
 
 footer{
-	margin: 20px 0;
-	color: var(--main-color);
+	background: #000;
+	margin-top: 20px;
+	color: var(--main-color_);
+	border-top: 10px solid var(--main-color_red);
 }
-
+.topFooter{
+	background: var(--main-color_grey);
+	display: flex;
+	color:#fff;
+	padding: 20px 10px;
+}
+.topFooter .footerSection{
+	margin-right: 250px;
+}
 }
 
 
