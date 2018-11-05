@@ -21,8 +21,7 @@ a:hover{
 header a,
 header a:visited,
 header a:active{
-	color: var(--main-color_white);
-	
+	color: var(--main-color_white);	
 }
 .logo:focus,
 .logo:hover{
@@ -36,7 +35,8 @@ header a:active{
 .container{
 	padding: 5px;
 }
-.header{
+.header,
+.headerTop{
   display: none;
 }
 .headerMob{
@@ -45,21 +45,13 @@ header a:active{
 	justify-content: space-between;
 	color: var(--main-color);
 	font-size: 15px;
+	background: var(--main-color_grey);
 }
   .headerMob .logo img{
-		width: 140px;
-		margin: 5px 0 0 5px;
+		padding: 5px 0 0;
 	}
-	.headerSocialMenu{
-		display: flex;
-		justify-content: space-around;
-	}
-	header .headerSocialMenu,
-	header .logo{
-  width: 45%;
-}
-.title{
-	display: none;
+.mainSponsor img{
+	width: 100%;
 }
 
 /*---MAIN---*/
@@ -67,6 +59,16 @@ header a:active{
    display: flex;
    flex-direction: column;
  }
+ .pageNameMob{
+	margin: 10px 0;
+}
+.pageNameMob strong{
+	font-size: 1.2em;
+	font-weight: normal;
+	color: #fff;
+	padding: 5px 10px;
+	background-color: var(--main-color_red);
+}
 	.sponsorsLogo{
 		display: none;
 	}
@@ -78,32 +80,22 @@ header a:active{
 			width: 100px;
 			margin: 0 5px 0 0;
 		}
-			/*Title*/
-			.titleMob{
-				font-size: 24px;
-				text-align: center;
-				color: var(--main-color_white);
-			}
 		/*Nav*/	
 		nav{
 			width: 100%;
 			overflow: scroll;
-			background: var(--main--bg_light);
-			margin: 10px 0;
+			background: var(--main-color_grey);
+			padding: 5px 0;
+			white-space: nowrap;
+			color: #fff;
 		}
 		.navMenu{
 			display: flex;
 		}
+		.navMenu li{
+			padding-left: 10px;
+		}
 		
-		.navItem:nth-child(2n){
-			align-items: center;
-			background:#fcfcfc02;
-		}
-		.navItem:nth-child(2n+1){
-			align-items: center;
-			background:#18386710;	
-		}
-
 		/*Filters*/
 		.filterMenu{
 			display: flex;
@@ -113,7 +105,6 @@ header a:active{
 		}
 		.filterItem{
 			width: 30%;
-			
 		}
 		select{
 			width: 100%;
@@ -124,17 +115,23 @@ header a:active{
 /*--EVENT--*/
 .month{
 	text-transform: uppercase;
-	text-decoration: underline ;
-	color: var(--main-color_white);
-	margin: 15px 0;
+	font-size: 1.1em;
+	height: 40px;
+}
+.month p{
+	padding: 0 10px;
+	display: table;
+	line-height: 26px;	
+	border-bottom: 3px solid var(--main-color_red);
 }
 
 .listEvent{
-	color: var(--main-color_white);
+	color: var(--main-color);
 }
 .listEvent a,
-.listEvent a:active{
-	color: var(--main-color_white);
+.listEvent a:active,
+.listEvent a:visited{
+	color: var(--main-color);
 }
 .listHead,
 .listContent{
@@ -143,25 +140,28 @@ header a:active{
 	padding: 5px;
 }
 .listContent{
-	height: 45px;
+	height: 60px;
 }
 .listContent .nameEvent{
 	font-size: 0.83em;
 }
+
 .listContent:nth-child(2n){
 	align-items: center;
-	background:#fcfcfc17;
+	background:#E5E5E5;
 }
 .listContent:nth-child(2n+1){
 	align-items: center;
-	background:#18386710;	
+	background:#D3D3D3;	
 }
+
+
 
 .listHead{
 	text-transform: uppercase;
-	font-weight: 700;
-	color: var(--main-color);
-	background: var(--main--bg_light);
+	font-size: .8em;
+	color: #fff;
+	background: var(--main-color_grey);
 }
 .dateEvent{
 	min-width: 45px;
@@ -194,11 +194,18 @@ header a:active{
 	text-align: left;
 	padding: 0 5px;
 }
+.listContent .eventCell{
+	border-right: 2px solid rgb(255, 255, 255);
+	height: 100%;
+}
 footer{
 	margin: 20px 0;
 	color: var(--main-color);
 }
 }
+
+
+
 /*---TABLET---*/
 @media (min-width: 640px) and (max-width: 1020px){
 	.headerMob{
@@ -346,9 +353,6 @@ footer{
 	color: var(--main-color);
 }
 }
-
-
-
 /*---DESKTOP---*/
 @media (min-width: 1020px) and (max-width: 1550px){
 	/* body{
@@ -358,8 +362,6 @@ footer{
 		background: rgb(255, 255, 255);
 	}
 	.mainSponsor{
-		height: 200px;
-		background-image: url("img/ad_header.jpg");
 		opacity: .8;
 	}
 	/*Header*/
