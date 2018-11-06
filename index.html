@@ -11,36 +11,28 @@
 <body>
     
 <div class="container">
-    <div class="headerTop">
-        <h1>Портал&nbsp; аматорського&nbsp; спорту, &nbsp;екстриму &nbsp;і &nbsp;активного &nbsp;відпочинку  в  Україні</h1>
-    </div>
     
     <header class="header"> 
         <div class="headerLogo">
             <img src="img/logo_red.png" alt="">
         </div> 
                         
-            <div class="headerMenu">
-                <ul>
-                    <li><a href="#" class="social-item">КАЛЕНДАР</a></li>
-                    <li><a href="#" class="social-item">ТУРИ</a></li>
-                    <li><a href="#" class="social-item">СЕКЦІЇ</a></li>
-                    <li><a href="#" class="social-item">ОБЄКТИ</a></li>
-                    <li><a href="#" class="social-item">МАГАЗИНИ</a></li>
-                    <li><a href="#" class="social-item">ПРОКАТИ</a></li>
-                    <li><a href="#" class="social-item">ФОРУМ</a></li>
-                </ul>
-                
-            </div>
+        <ul class="headerMenu">
+            <li><a href="#" class="social-item calendar">КАЛЕНДАР</a></li>
+            <li><a href="#" class="social-item">ТУРИ</a></li>
+            <li><a href="#" class="social-item">СЕКЦІЇ</a></li>
+            <li><a href="#" class="social-item">ОБЄКТИ</a></li>
+            <li><a href="#" class="social-item">МАГАЗИНИ</a></li>
+            <li><a href="#" class="social-item">ПРОКАТИ</a></li>
+            <li><a href="#" class="social-item">ФОРУМ</a></li>
+        </ul>    
             
-            <div class="headerSocialMenu">
-                <ul>
-                    <li><a href="#" class="social-item">Fb</a></li>
-                    <li><a href="#" class="social-item">Tlg</a></li>
-                    <li><a href="#" class="social-item">In</a></li>
-                </ul>          
-            </div>
-            
+        <ul class="headerSocialMenu">
+            <li><a href="#" class="social-item">Fb</a></li>
+            <li><a href="#" class="social-item">Tlg</a></li>
+            <li><a href="#" class="social-item">In</a></li>
+         </ul>          
+               
     </header>
  
     <header class="headerMob">
@@ -48,20 +40,12 @@
         <a href="#" class="logo">
             <img src="img/logo_red.png"  alt="">
         </a>
-            <!-- <ul class="headerMenuMob">
-                <li><a href="#" class="social-item">КАЛЕНДАР</a></li>
-                <li><a href="#" class="social-item">ТУРИ</a></li>
-                <li><a href="#" class="social-item">СЕКЦІЇ</a></li>
-                <li><a href="#" class="social-item">ОБЄКТИ</a></li>
-                <li><a href="#" class="social-item">МАГАЗИНИ</a></li>
-                <li><a href="#" class="social-item">ПРОКАТИ</a></li>
-                <li><a href="#" class="social-item">ФОРУМ</a></li>
-            </ul> -->
+
     </header> 
 
-    <section class="mainSponsor">
+    <!-- <section class="mainSponsor">
         <img src="img/ad_header.jpg" alt="">
-    </section>
+    </section> -->
 
     <main>
     <!-- SPONSOR section -->
@@ -105,7 +89,7 @@
 
     <!--main-Events-->
         <section class="eventSection">
-            <!-- NAVIGATION -->
+            <!-- NAVIGATION 
             <nav>
                 <ul class="navMenu">
                     <li class="navItem">Ліжі бігові</li>
@@ -118,7 +102,7 @@
                     <li class="navItem">Біг</li>
                     <li class="navItem">Мультігонки</li>
                     <li class="navItem">Більше...</li>
-                    <!--<li class="navItem">Мото</li>
+                    <li class="navItem">Мото</li>
                     <li class="navItem">Вейкбордінг</li>
                     <li class="navItem">Раллі</li>
                     <li class="navItem">Полденс</li>
@@ -126,41 +110,43 @@
                     <li class="navItem">тест</li>
                     <li class="navItem">тест</li>
                     <li class="navItem">тест</li>
-                    <li class="navItem">тест</li> -->
+                    <li class="navItem">тест</li> 
                 </ul>
-            </nav>          
-            <!-- NAVIGATION end-->
-
+            </nav>       
+         NAVIGATION end-->
+        <div class="pageNameDesktop">
+            <strong>Календар</strong>
+        </div>
             <!-- FILTERS -->
             <div class="filterMenu">
-                    <div class="locEventFilter  filterItem">
-                        <!-- <label for="">Локація</label> <br> -->
-                        <select>
-                            <option>Дніпро</option>
-                            <option>Вінниця</option>
-                            <option selected>Київ</option>
-                            <option>Харків</option>
-                            <option>Черкаси</option>
-                        </select>
-                    </div>
-                    
+                                      
                     <div class="CategoryFilter filterItem">
                         <!-- <label for="">Спорт</label><br> -->
                         <select>
+                            <option selected>Види спорту</option>
                             <option>Вейкбордінг</option>
                             <option>САПбордінг</option>
-                            <option selected>Каякінг</option>
                             <option>Кайтсьорфінг</option>
                             <option>Віндсьорфінг</option>
+                        </select>
+                    </div>
+                    <div class="locEventFilter  filterItem">
+                        <!-- <label for="">Локація</label> <br> -->
+                        <select>
+                            <option selected>Місто</option>
+                            <option>Дніпро</option>
+                            <option>Вінниця</option>
+                            <option>Харків</option>
+                            <option>Черкаси</option>
                         </select>
                     </div>
                     
                     <div class="dateEventFilter filterItem">
                         <!-- <label for="">Місяць</label><br> -->
                         <select>
+                            <option selected>Дата</option>
                             <option>Квітень</option>
                             <option>Травень</option>
-                            <option selected>Листопад</option>
                             <option>Грудень</option>
                             <option>Січень</option>
                         </select>
