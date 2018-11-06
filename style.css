@@ -15,8 +15,6 @@
 a:focus,
 a:hover{
 	border-bottom: 2px solid var(--main-color_red);
-	color: var(--main-color_red);
-
 }
 header a,
 header a:visited,
@@ -27,7 +25,6 @@ header a:active{
 .logo:hover{
 	border: none;
 }
-
 
 /*---MOBILE---*/
 @media (max-width: 640px){
@@ -96,7 +93,7 @@ header a:active{
 			padding-left: 10px;
 		}
 		
-		/*Filters*/
+	/*Filters*/
 		.filterMenu{
 			display: flex;
 			justify-content: space-between;
@@ -110,6 +107,9 @@ header a:active{
 			width: 100%;
 			color: var(--main-color);
 			font-weight: 700;
+		}
+		.pageNameDesktop{
+			display: none;
 		}
 
 /*--EVENT--*/
@@ -155,14 +155,13 @@ header a:active{
 	background:#D3D3D3;	
 }
 
-
-
 .listHead{
 	text-transform: uppercase;
 	font-size: .8em;
 	color: #fff;
 	background: var(--main-color_grey);
 }
+
 .dateEvent{
 	min-width: 45px;
 	width: 13%;
@@ -172,12 +171,12 @@ header a:active{
 .nameEvent{
 	min-width: 160px;
 	width: 55%;
-	align-self: center;
 	text-align: left;
-	padding: 0 10px;
 	display: flex;
 	flex-direction: column;
 	text-transform: uppercase;
+	justify-content: center;
+
 }
 .orgEvent{
 	display: none;
@@ -198,13 +197,19 @@ header a:active{
 	border-right: 2px solid rgb(255, 255, 255);
 	height: 100%;
 }
+.listContent .eventCell:last-child{
+	border-right: none;
+}
+.listContent .nameEvent{
+	font-size: 15px;
+	font-weight: bold;
+	justify-content: center;
+} 
 footer{
 	margin: 20px 0;
 	color: var(--main-color);
 }
 }
-
-
 
 /*---TABLET---*/
 @media (min-width: 640px) and (max-width: 1020px){
@@ -353,63 +358,64 @@ footer{
 	color: var(--main-color);
 }
 }
+
 /*---DESKTOP---*/
 @media (min-width: 1020px) and (max-width: 1550px){
-	/* body{
-		background-image: url("img/bg-test.png");
-	} */
+	
 	.container{
 		background: rgb(255, 255, 255);
 	}
 	.mainSponsor{
 		opacity: .8;
+		display: none;
 	}
-	/*Header*/
+/*HEADER*/
 		.headerMob{
 			display: none;
 		}
-		.headerTop{
-			height: 35px;
-			background: #000;
-			color: var(--main-color_red);
-			font-size: 1.1em;
-			letter-spacing: 1px;
-		}
-		.headerTop h1{
-			font-size: 17px;
-			font-weight: normal;
-			text-align: center;
-			padding-top: 7px;
-		}
 		.header{
 			padding: 0 35px;
-			height: 50px;
+			height: 55px;
 			display: flex;
 			align-items: center;
 			justify-content: flex-start;
 			background: #333;
+			
 		}
-	 .headerMenu{
+		.headerMenu,
+		.headerSocialMenu{
+			display: flex;
+		}
+	 	.headerMenu{
 			width: 76%;
 		}
 		.headerSocialMenu{
 			width: 24%;
-		}
-		.headerMenu ul,
-		.headerSocialMenu ul{
-			display: flex;
+			justify-content: flex-end;
 		}
 		.header li{
 			margin-right: 50px;
+			font-size: 15px;
+			font-weight: bold;
+			color: #ADADAD;
+			letter-spacing: 1px;
+		}
+		.header li:last-child{
+			margin-right: 0;
 		}
 
+		.headerMenu .calendar{
+			color: var(--main-color_red);
+			border-bottom: 3px solid var(--main-color_red);
+			font-size: 1.1em;
+		}
 
 /*MAIN*/
 		main{
 			display: flex;
 			flex-direction: row-reverse;
 			justify-content: space-between;
-			padding: 10px 35px;
+			padding-left: 35px;
 		}
 		.sponsorsLogoMob{
 			display: none;
@@ -417,39 +423,35 @@ footer{
 		.eventSection{
 			width: 76%;		
 		}
+
+/*SPONSORS*/
 		.sponsorsLogo{
-			width: 24%;			
+			width: 24%;	
+			border-left: 1px solid rgb(238, 237, 237);
+			background: #FCFCFC;
+			padding-right: 35px;
+		}
+		.titleSponsor{
+			color: #fff;
+			background: var(--main-color_red);
+			font-size: 18px;
+			padding: 5px;
+			display: table;
+			margin-bottom: 50px;
+		}
+		.sponsorItem{
+			margin: 10px 0 10px 10px;
+		}		
+		.sponsorItem a:hover,
+		.sponsorItem a:focus{
+			border: none;
 		}
 		.sponsorItem img{
 			width: 100%;
 		}
 
-/*Sponsor*/
-.sponsorsLogo{
-	padding-left: 10px;
-}
-.titleSponsor{
-	height: 50px;
-	color: var(--main-color_grey);
-	font-size: 22px;
-	display: flex;
-	justify-content: flex-end;
-}
-.titleSponsor p{
-	font-weight: bold;
-	display: table;
-	line-height: 30px;	
-	border-bottom: 3px solid var(--main-color_red);
-}
-.sponsorItem{
-	margin-bottom: 10px;
-}
-/*end Sponsor*/
-
-		
-		
-/*Nav*/	
-		nav{
+/*NAVIGATION*/	
+		/* nav{
 			height: 40px;
 			background: var(--main-color_grey);
 		}
@@ -460,12 +462,11 @@ footer{
 			padding: 10px 22px 0 0px;
 			margin-left: 10px;
 			color: var(--main-color_white);
-			font-size: .97em;
+			font-weight: bold;
 			white-space: nowrap;
 			letter-spacing: 1px;
-		
 		}
-		/* .navItem:nth-child(2n){
+		 .navItem:nth-child(2n){
 			align-items: center;
 			background:#E5E5E5;
 		}
@@ -473,6 +474,24 @@ footer{
 			align-items: center;
 			background:#D3D3D3;
 		} */
+
+		/*PAGE NAME*/
+		.pageNameMob{
+			display: none;
+			}
+			.pageNameDesktop{
+				margin-top: 20px;
+				display: flex;
+				justify-content: space-between;
+			}
+			.pageNameDesktop strong{
+				font-size: 1.7em;
+				font-weight: normal;
+				color: #fff;
+				padding: 10px;
+				background-color: var(--main-color_red);
+				letter-spacing: 1px;
+			}
 	
 /*Filters*/
 		.filterMenu{
@@ -484,17 +503,16 @@ footer{
 		}
 		.filterItem{
 			width: 200px;
-			margin: 30px 20px 0 0;
+			margin: 5px 20px 0 0;
 		}
 		
 		select{
 			color: var(--main-color);
-			font-weight: 700;
+			font-weight: bolder;
 			text-transform: uppercase;
-			height: 25px;
+			height: 30px;
 			width: 200px;
 			border: 1px solid #000000;
-			letter-spacing: 1px;
 		}
 		/* label{
 			margin-right: 5px;
@@ -532,7 +550,6 @@ footer{
 	text-transform: uppercase;
 	font-weight: bold;
 	color: var(--main-color_white);
-	letter-spacing: 1px;
 	background: #333;
 	font-size: .9em;
 	align-items: center;
@@ -561,8 +578,10 @@ footer{
 	min-width: 330px;
 	width: 50%;
 	text-transform: uppercase;
-	font-weight: bold;	
-}.nameEvent a{
+	font-weight: bold;
+	font-size: 15px;
+}
+.nameEvent a{
 	width: 100%;
 }
 .orgEvent{
