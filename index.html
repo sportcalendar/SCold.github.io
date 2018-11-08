@@ -1,366 +1,484 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>SportCalendar</title>
-    <link rel="stylesheet" href="style.css">
-    
-</head>
-<body>
-    
-<div class="container">
-    
-    <header class="header"> 
-        <div class="headerLogo">
-            <img src="img/logo_red.png" alt="">
-        </div> 
-                        
-        <ul class="headerMenu">
-            <li><a href="#" class="social-item calendar">КАЛЕНДАР</a></li>
-            <li><a href="#" class="social-item">ТУРИ</a></li>
-            <li><a href="#" class="social-item">СЕКЦІЇ</a></li>
-            <li><a href="#" class="social-item">ОБЄКТИ</a></li>
-            <li><a href="#" class="social-item">МАГАЗИНИ</a></li>
-            <li><a href="#" class="social-item">ПРОКАТИ</a></li>
-            <li><a href="#" class="social-item">ФОРУМ</a></li>
-        </ul>    
-            
-        <ul class="headerSocialMenu">
-            <li><a href="#" class="social-item">Fb</a></li>
-            <li><a href="#" class="social-item">Tlg</a></li>
-            <li><a href="#" class="social-item">In</a></li>
-         </ul>          
-               
-    </header>
+:root{
+	--color_black: rgba(51, 51, 51, 0.815);
+	--color_red: #DF2027;
+	--color_grey:rgb(155, 157, 163);
+	--line_grey:rgba(183, 183, 185, 0.596);
+	--bg_grey: #F1F0ED;
+}
+*{
+	box-sizing: border-box;
+	font-family: "Helvetica", Arial, sans-serif;
+	text-decoration: none;
+	list-style-type: none;
+	padding: 0;
+	margin: 0;
+}
+hr{
+	margin: 0 20px;
+	border: none;
+	background-color:var(--line_grey);
+	height: 1px;
+}
+
+
+
+/*---MOBILE---*/
+@media (max-width: 640px){
+	
+.container{
+	padding: 5px;
+}
+.header,
+.headerTop{
+  display: none;
+}
+.headerMob{
+  display: flex;  
+	align-items: center;  
+	justify-content: space-between;
+	color: var(--main-color);
+	font-size: 15px;
+	background: var(--main-color_grey);
+}
+  .headerMob .logo img{
+		padding: 5px 0 0;
+	}
+.mainSponsor img{
+	width: 100%;
+}
+
+/*---MAIN---*/
+ main{
+   display: flex;
+   flex-direction: column;
+ }
+ .pageNameMob{
+	margin: 10px 0;
+}
+.pageNameMob strong{
+	font-size: 1.2em;
+	font-weight: normal;
+	color: #fff;
+	padding: 5px 10px;
+	background-color: var(--main-color_red);
+}
+	.sponsorsLogo{
+		display: none;
+	}
+		.sponsorsLogoMob{
+			display: flex;
+			overflow: scroll;
+		}
+		.sponsorsLogoMob img{
+			width: 100px;
+			margin: 0 5px 0 0;
+		}
+		/*Nav*/	
+		nav{
+			width: 100%;
+			overflow: scroll;
+			background: var(--main-color_grey);
+			padding: 5px 0;
+			white-space: nowrap;
+			color: #fff;
+		}
+		.navMenu{
+			display: flex;
+		}
+		.navMenu li{
+			padding-left: 10px;
+		}
+		
+	/*Filters*/
+		.filterMenu{
+			display: flex;
+			justify-content: space-between;
+			padding: 10px 0;
+			color: var(--main-color_white);
+		}
+		.filterItem{
+			width: 30%;
+		}
+		select{
+			width: 100%;
+			color: var(--main-color);
+			font-weight: 700;
+		}
+		.pageNameDesktop{
+			display: none;
+		}
+
+/*--EVENT--*/
+.month{
+	text-transform: uppercase;
+	font-size: 1.1em;
+	height: 40px;
+}
+.month p{
+	padding: 0 10px;
+	display: table;
+	line-height: 26px;	
+	border-bottom: 3px solid var(--color_red);
+}
+/*--CONTENT--*/
  
-    <header class="headerMob">
-        
-        <a href="#" class="logo">
-            <img src="img/logo_red.png"  alt="">
-        </a>
+footer{
+	margin: 20px 0;
+	color: var(--main-color);
+}
+}
 
-    </header> 
+/*---TABLET---*/
+@media (min-width: 640px) and (max-width: 1020px){
+	.headerMob{
+		display: none;
+	}
+	.header{
+		display: flex;
+		align-items: center;
+		justify-content: flex-start;
+	}
+	header .headerSocialMenu,
+	header .logo,
+	header .headerMenu{
+  width: 33%;
+  
+}
+	.header .logo img{
+		width: 120px;
+		margin: 5px 0 0 5px;
+	}
+	.headerMenu{
+		display: flex;
+		justify-content: space-between;
+	}
+	.headerSocialMenu{
+		display: flex;
+		justify-content: flex-end;
+	}
+	.headerSocialMenu a{
+		margin-right: 5px;
+	}
 
-    <!-- <section class="mainSponsorPicture">
-        <img src="img/ad_header.jpg" alt="">
-    </section> -->
+	.title{
+		display: none;
+	}
 
-    <main>
-    <!-- SPONSOR SECTION -->
-        <section class="sponsorsSection">
-            
-                <div class="titleSponsor">
-                    <strong>Спонсори</strong>
-                </div>
-         
-            <div class="sponsorItem rapid">
-                <a href="http://rapid.net.ua/">
-                    <img src="img/sponsors/rapid.png" alt="">                    
-                </a>
-            </div>
-            <div class="sponsorItem borika">
-                <a href="http://borika.ua/">
-                    <img src="img/sponsors/borika.png" alt="">
-                </a>
-            </div>        
-            
-            <div class="sponsorItem neris">
-                <a href="http://www.neris.ua/">
-                    <img src="img/sponsors/neris.png" alt="">                    
-                </a>
-            </div>     
-            <div class="sponsorItem kolibri">
-                <a href="http://www.kolibriboats.com/">
-                    <img src="img/sponsors/kolibri.png" alt="">                    
-                </a>
-            </div>
-            <div class="sponsorItem ordana">
-                <a href="http://www.ordana.com/?l=ua">
-                    <img src="img/sponsors/ordana.png" alt="">
-                    
-                </a>
-            </div>
-        </section>  
-    <!--end SPONSOR SECTION -->
+	/*---MAIN---*/
+	
+	.sponsorsLogoMob{
+		display: none;
+	}
+	 .sponsorsLogo{
+		 display: flex;
+		 overflow: scroll;
+	 }
+	 .sponsorsLogo img{
+		 width: 97%;
+		 margin-top: 5px;
+	 }
 
-    <!--NEWS SECTION-->
-        <section class="newsSection">
-            <div class="mostAwaitedEvent">
-                <strong>Не пропустіть</strong>
-            </div>
-            <div class="item">
-   
-            </div><!--Фест водного спорту end-->
-            
-            <div class="item">
-                                        
-            </div><!--Фест водного спорту end-->
-            
-            <div class="item">
-                                        
-            </div><!--Фест водного спорту end-->
-            
-            <div class="item">
-                                        
-            </div><!--Фест водного спорту end-->
-            
-            <div class="item">
-                                        
-            </div><!--Фест водного спорту end-->
-            
-            <div class="item">
-                                        
-            </div><!--Фест водного спорту end-->
-            
-            <div class="item">
-                                        
-            </div><!--Фест водного спорту end-->
-            
-            <div class="item">
-                                        
-            </div><!--Фест водного спорту end-->
-            
-            <div class="item">
-                                        
-            </div><!--Фест водного спорту end-->
-            
-            <div class="item">
-                                        
-            </div><!--Фест водного спорту end-->
-            
-            <div class="item">
-                                        
-            </div><!--Фест водного спорту end-->
-            
-            <div class="item">
-                                        
-            </div><!--Фест водного спорту end-->
-            
-            <div class="item">
-                                        
-            </div><!--Фест водного спорту end-->
-            
+	
 
-        </section>
-    <!--end NEWS SECTION-->
-    
-    <!--EVENT SECTION-->
-        <section class="eventSection">
-                
-            <div class="pageNameDesktop">
-                <strong>Календар</strong>
-            </div>
-                <!-- FILTERS -->
-                <div class="filterMenu">
-                                        
-                        <div class="CategoryFilter filterItem">
-                            <!-- <label for="">Спорт</label><br> -->
-                            <select>
-                                <option selected>Види спорту</option>
-                                <option class="sportName">Вейкбордінг</option>
-                                <option class="sportName">САПбордінг</option>
-                                <option class="sportName">Кайтсьорфінг</option>
-                                <option class="sportName">Віндсьорфінг</option>
-                            </select>
-                        </div>
-                        <div class="locEventFilter filterItem">
-                            <!-- <label for="">Локація</label> <br> -->
-                            <select>
-                                <option selected>Місто</option>
-                                <option class="sportName">Дніпро</option>
-                                <option class="sportName">Вінниця</option>
-                                <option class="sportName">Харків</option>
-                                <option class="sportName">Черкаси</option>
-                            </select>
-                        </div>
-                        
-                        <div class="dateEventFilter filterItem">
-                            <!-- <label for="">Місяць</label><br> -->
-                            <select>
-                                <option selected>Дата</option>
-                                <option class="sportName">Квітень</option>
-                                <option class="sportName">Травень</option>
-                                <option class="sportName">Грудень</option>
-                                <option class="sportName">Січень</option>
-                            </select>
-                        </div>
-                </div> 
-                <!-- FILTERS end-->
+	/*Nav*/	
+	
+	
 
-                <div class="month">
-                    <p>Квітень</p>
-                </div>
+	/*Filters*/
+	.filterMenu{
+		display: flex;
+		justify-content: space-between;
+		margin: 10px 5px;
+		color: var(--main-color_white);
+	}
+	.filterItem{
+		width: 33%;
+		display: flex;
+	}
+	select{
+		color: var(--main-color);
+		font-weight: bolder;
+		width: 50%;
+		text-transform: uppercase;
+	}
+	label{
+		margin-right: 5px;
+	}
 
-            <!--LIST EVENT-->
-                <div class="listEvent">                   
-                            
-                    <!--Фест водного спорту-->
-                    <div class="eventContent FestVodnyiSports">
-                        <section class="imgEvent">
-                            <img src="img/logo_red.png" alt="">
-                        </section>
-                        <section class="dataEvent">
-                            <div class="dateLocationEvent eventCell"> 
-                                <strong class="dateEvent eventCell">15/06 - 16/06</strong>
-                                <strong class="locEvent eventCell">ОДЕСА</strong>
-                            </div>
-                            <div class="nameEvent eventCell">
-                                <a href="https://eventpage.github.io/" target="_blank">
-                                    Фестиваль Водних Видів Спорту </a>
-                            </div>
-                            <div class="orgEvent eventCell">Одеська федерація водних видів спорту</div>
-                            
-                        </section>
-                    </div><!--Фест водного спорту end-->
-                    <hr>
-
-                    <div class="eventContent FestVodnyiSports">
-                        <section class="imgEvent">
-                            <img src="img/logo_red.png" alt="">
-                        </section>
-                        <section class="dataEvent">
-                            <div class="dateLocationEvent eventCell"> 
-                                <strong class="dateEvent eventCell">15/06 - 16/06</strong>
-                                <strong class="locEvent eventCell">Одеса</strong>
-                            </div>
-                            <div class="nameEvent eventCell">
-                                <a href="https://eventpage.github.io/" target="_blank">
-                                    Фестиваль Водних Видів Спорту </a>
-                            </div>
-                            <div class="orgEvent eventCell">Одеська федерація водних видів спорту</div>
-                            
-                        </section>
-                    </div><!--Фест водного спорту end-->
-                    <hr>
-
-                    <div class="eventContent FestVodnyiSports">
-                        <section class="imgEvent">
-                            <img src="img/logo_red.png" alt="">
-                        </section>
-                        <section class="dataEvent">
-                            <div class="dateLocationEvent eventCell"> 
-                                <strong class="dateEvent eventCell">15/06 - 16/06</strong>
-                                <strong class="locEvent eventCell">ОДЕСА</strong>
-                            </div>
-                            <div class="nameEvent eventCell">
-                                <a href="https://eventpage.github.io/" target="_blank">
-                                    Фестиваль Водних Видів Спорту </a>
-                            </div>
-                            <div class="orgEvent eventCell">Одеська федерація водних видів спорту</div>
-                        </section>
-                    </div><!--Фест водного спорту end-->
-                    <hr>
-
-                    <div class="eventContent FestVodnyiSports">
-                        <section class="imgEvent">
-                            <img src="img/logo_red.png" alt="">
-                        </section>
-                        <section class="dataEvent">
-                            <div class="dateLocationEvent eventCell"> 
-                                <strong class="dateEvent eventCell">15/06 - 16/06</strong>
-                                <strong class="locEvent eventCell">ОДЕСА</strong>
-                            </div>
-                            <div class="nameEvent eventCell">
-                                <a href="https://eventpage.github.io/" target="_blank">
-                                    Фестиваль Водних Видів Спорту </a>
-                            </div>
-                            <div class="orgEvent eventCell">Одеська федерація водних видів спорту</div>
-                        </section>
-                    </div><!--Фест водного спорту end-->
-                    <hr>
-
-                    <div class="eventContent FestVodnyiSports">
-                        <section class="imgEvent">
-                            <img src="img/logo_red.png" alt="">
-                        </section>
-                        <section class="dataEvent">
-                            <div class="dateLocationEvent eventCell"> 
-                                <strong class="dateEvent eventCell">15/06 - 16/06</strong>
-                                <strong class="locEvent eventCell">Одеса</strong>
-                            </div>
-                            <div class="nameEvent eventCell">
-                                <a href="https://eventpage.github.io/" target="_blank">
-                                    Фестиваль Водних Видів Спорту </a>
-                            </div>
-                            <div class="orgEvent eventCell">Одеська федерація водних видів спорту</div>
-                        </section>
-                    </div><!--Фест водного спорту end-->
-                    <hr>
-
-                    <div class="eventContent FestVodnyiSports">
-                        <section class="imgEvent">
-                            <img src="img/logo_red.png" alt="">
-                        </section>
-                        <section class="dataEvent">
-                            <div class="dateLocationEvent eventCell"> 
-                                <strong class="dateEvent eventCell">15/06 - 16/06</strong>
-                                <strong class="locEvent eventCell">ОДЕСА</strong>
-                            </div>
-                            <div class="nameEvent eventCell">
-                                <a href="https://eventpage.github.io/" target="_blank">
-                                    Фестиваль Водних Видів Спорту </a>
-                            </div>
-                            <div class="orgEvent eventCell">Одеська федерація водних видів спорту</div>
-                        </section>
-                    </div><!--Фест водного спорту end-->
-                    <hr>
-                        
-                        
-                </div> 
-            <!--LIST EVENT end-->
-
-                
-            
-        </section> 
-    <!--end EVENT SECTION-->
-    
-    
-
-    </main>
-
-    <footer class="footer">
-        <ul class="topFooter">
-            <li class="footerSection">
-                <ul>
-                    <h3>test</h3>
-                    <li>consectetur</li>
-                    <li>consectetur</li>
-                    <li>consectetur</li>
-                </ul>
-            </li>
-            <li class="footerSection">
-                <ul>
-                    <h3>test</h3>
-                    <li>consectetur</li>
-                    <li>consectetur</li>
-                    <li>consectetur</li>
-                </ul>
-            </li>
-            <li class="footerSection">
-                <ul>
-                    <h3>test</h3>
-                    <li>consectetur</li>
-                    <li>consectetur</li>
-                    <li>consectetur</li>
-                </ul>
-            </li>
-            <li class="footerSection">
-                <ul>
-                    <h3>test</h3>
-                    <li>consectetur</li>
-                    <li>consectetur</li>
-                    <li>consectetur</li>
-                </ul>
-            </li>
-        </ul>
-        <section>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Provident, eligendi et esse autem tempore suscipit expedita reprehenderit nemo corrupti ratione quidem voluptas, minima sed quaerat error officia velit tempora quisquam.</section>
-    </footer>
-          
-</div> <!--End container-->
+	/*--EVENT--*/
 
 
-</body>
-</html>
+footer{
+	margin: 20px 0;
+	color: var(--main-color);
+}
+}
+
+/*---DESKTOP---*/
+@media (min-width: 1020px) and (max-width: 1450px){
+	
+	.container{
+		background: rgb(255, 255, 255);
+	}
+	/* .mainSponsorPicture{
+		opacity: .8;
+		display: none;
+	} */
+/*HEADER*/
+		.headerMob{
+			display: none;
+		}
+		.header{
+			padding: 0 35px;
+			height: 55px;
+			display: flex;
+			align-items: center;
+			justify-content: flex-start;
+			background: #333;
+		}
+		.headerMenu,
+		.headerSocialMenu{
+			display: flex;
+		}
+	 	.headerMenu{
+			width: 76%;
+		}
+		.headerMenu a,
+		.headerMenu a:visited,
+		.headerMenu a:active{
+			color: white;	
+		}
+		.headerSocialMenu{
+			width: 24%;
+			justify-content: flex-end;
+		}
+		.headerSocialMenu a,
+		.headerSocialMenu a:visited,
+		.headerSocialMenu a:active{
+			color: var(--color_grey);	
+			font-weight: bold;
+			font-size: 1.1em;
+		}
+		.header li{
+			margin-right: 30px;
+			font-size: 14px;
+			font-weight: bold;
+			letter-spacing: 1px;
+		}
+		.header li:last-child{
+			margin-right: 0;
+		}
+		.headerMenu .calendar{
+			color: var(--color_red);
+			border-bottom: 3px solid var(--color_red);
+			font-size: 1.1em;
+		}
+		a:focus,
+		a:hover{
+			border-bottom: 2px solid var(--color_red);
+		}
+		.logo:focus,
+		.logo:hover{
+			border: none;
+		}
+
+/*MAIN*/
+main{
+	display: flex;
+	flex-direction: row-reverse;
+	justify-content: space-between;
+	padding: 35px;
+	background: var(--bg_grey);
+}
+	.month{
+		text-transform: uppercase;
+		font-size: 1.1em;
+		height: 40px;
+		margin: 0 10px;
+	}
+	.month p{
+		padding: 0 5px;
+		display: table;
+		line-height: 26px;	
+		color: var(--color_grey);
+		border-bottom: 3px solid var(--color_red);
+	}
+	.mobOrgEvent{
+		display: none;
+	}
+/*PAGE NAME*/
+		.pageNameMob{
+			display: none;
+			}
+		.pageNameDesktop{
+			margin-top: 20px;
+			display: flex;
+			justify-content: space-between;
+		}
+		.pageNameDesktop strong{
+			font-size: 1.7em;
+			font-weight: normal;
+			color:var(--color_grey);
+			padding: 10px;
+			letter-spacing: 1px;
+		}
+	/*FILTERS*/
+		.filterMenu{
+			display: flex;
+			justify-content: flex-start;
+			align-items: center;
+			color: var(--main-color);
+			height: 50px;
+		}
+		.filterItem{
+			width: 145px;
+		}
+		select{
+			color: var(--color_black);
+			font-weight: bolder;
+			text-transform: uppercase;
+			height: 30px;
+			width: 135px;
+			border: 1px solid var(--color_grey);
+		}
+		select:focus,
+		select:hover,
+		select:active{
+			outline: none;
+		}
+		.filterMenu .sportName {
+			color: var(--color_black);
+		}
+	
+		
+/*EVENTS*/
+		.eventSection{
+			width: 50%;
+			min-width: 450px;	
+			background: white;
+			border-left: 2px solid var(--bg_grey);
+		}
+		
+	.listEvent{
+		color: var(--color_grey);
+		font-size: 14px;
+	}
+	.eventContent{
+		display: flex;
+		align-items: center;
+		height: 100px;
+		line-height: 22px;
+	}
+	.nameEvent{
+		text-transform: uppercase;
+		font-size: 17px;
+	}
+	.nameEvent a,
+	.nameEvent a:visited,
+	.nameEvent a:active{
+		color:var(--color_red);
+		font-weight: bold;
+	}
+	.dateLocationEvent{
+		display: flex;
+		justify-content: space-between;
+	}
+	.dateEvent,
+	.locEvent{
+		font-size: 14px;
+		font-weight: bold;
+		text-transform: uppercase;
+		letter-spacing: 1px;
+	}
+	.dateEvent{
+		font-size: 0.97em;
+	}
+	.orgEvent{
+		color: var(--color_grey);
+	}
+	
+
+	/*NEWS*/
+		.newsSection{
+			width: 26%;
+			min-width: 250px;	
+			background: white;
+			border-left: 2px solid var(--bg_grey);
+		}
+		
+		.mostAwaitedEvent{
+			margin-top: 20px;
+			display: flex;
+			justify-content: space-between;
+		}
+		.mostAwaitedEvent strong{
+			font-size: 1.3em;
+			font-weight: normal;
+			color:var(--color_grey);
+			padding: 10px;
+			letter-spacing: 1px;
+		}
+		.newsSection .item{
+			height: 50px;
+		}
+		.newsSection .item:nth-child(2n){
+			height: 50px;
+			margin: 0 5px;
+			background: var(--bg_grey);
+			border-bottom: 1px solid var(--line_grey);
+		}
+		
+
+/*SPONSORS*/
+		.sponsorsLogoMob{
+			display: none;
+		}
+		.titleSponsor{
+			margin-top: 20px;
+			display: flex;
+			justify-content: space-between;
+		}
+		.titleSponsor strong{
+			font-size: 1.3em;
+			font-weight: normal;
+			color:var(--color_grey);
+			padding: 10px;
+			letter-spacing: 1px;
+		}
+		.sponsorsSection{
+			width: 20%;
+			min-width: 250px;	
+			background: white;
+			border-left: 2px solid var(--bg_grey);
+		}
+	
+		.sponsorItem{
+			margin: 10px 0 10px 10px;
+		}		
+		.sponsorItem a:hover,
+		.sponsorItem a:focus{
+			border: none;
+		}
+		.sponsorItem img{
+			width: 100%;
+		}
+
+
+footer{
+	background: #000;
+	margin-top: 20px;
+	color: var(--main-color_);
+	border-top: 10px solid var(--main-color_red);
+}
+.topFooter{
+	background: var(--main-color_grey);
+	display: flex;
+	color:#fff;
+	padding: 20px 10px;
+}
+.topFooter .footerSection{
+	margin-right: 250px;
+}
+}
+
 
