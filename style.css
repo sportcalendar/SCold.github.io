@@ -14,12 +14,13 @@
 	margin: 0;
 }
 hr{
-	margin: 0 20px;
 	border: none;
 	background-color:var(--line_grey);
 	height: 1px;
 }
-
+body{
+	background: var(--bg_grey);
+}
 
 
 /*---MOBILE---*/
@@ -215,10 +216,10 @@ footer{
 }
 
 /*---DESKTOP---*/
-@media (min-width: 1020px) and (max-width: 1450px){
+@media (min-width: 1300px) and (max-width: 1450px){
 	
 	.container{
-		background: rgb(255, 255, 255);
+		
 	}
 	/* .mainSponsorPicture{
 		opacity: .8;
@@ -229,29 +230,37 @@ footer{
 			display: none;
 		}
 		.header{
-			padding: 0 35px;
 			height: 55px;
 			display: flex;
 			align-items: center;
 			justify-content: flex-start;
 			background: #333;
 		}
+
+		.headerLogo{
+			width: 60px;
+			display: flex;
+			justify-content: center;
+		}
+		.menuContent{
+			margin-left: 25px;
+			margin-right: 60px;
+			display: flex;
+			justify-content: space-between;
+			width: 100%;
+		}
 		.headerMenu,
 		.headerSocialMenu{
 			display: flex;
+			
 		}
-	 	.headerMenu{
-			width: 76%;
-		}
+	 	
 		.headerMenu a,
 		.headerMenu a:visited,
 		.headerMenu a:active{
 			color: white;	
 		}
-		.headerSocialMenu{
-			width: 24%;
-			justify-content: flex-end;
-		}
+		
 		.headerSocialMenu a,
 		.headerSocialMenu a:visited,
 		.headerSocialMenu a:active{
@@ -283,35 +292,31 @@ footer{
 		}
 
 /*MAIN*/
-main{
-	display: flex;
-	flex-direction: row-reverse;
-	justify-content: space-between;
-	padding: 35px;
-	background: var(--bg_grey);
-}
-	.month{
-		text-transform: uppercase;
-		font-size: 1.1em;
-		height: 40px;
-		margin: 0 10px;
+	main{
+		width: 1200px;
+		margin: 60px;
+		display: flex;
 	}
-	.month p{
-		padding: 0 5px;
-		display: table;
-		line-height: 26px;	
-		color: var(--color_grey);
-		border-bottom: 3px solid var(--color_red);
-	}
-	.mobOrgEvent{
-		display: none;
-	}
+		.month{
+			text-transform: uppercase;
+			font-size: 1.1em;
+			height: 40px;
+			margin-top: 10px;
+		}
+		.month p{
+			display: table;
+			line-height: 26px;	
+			color: var(--color_grey);
+			border-bottom: 3px solid var(--color_red);
+		}
+		.mobOrgEvent{
+			display: none;
+		}
 /*PAGE NAME*/
 		.pageNameMob{
 			display: none;
 			}
 		.pageNameDesktop{
-			margin-top: 20px;
 			display: flex;
 			justify-content: space-between;
 		}
@@ -319,7 +324,7 @@ main{
 			font-size: 1.7em;
 			font-weight: normal;
 			color:var(--color_grey);
-			padding: 10px;
+			padding: 15px 0;
 			letter-spacing: 1px;
 		}
 	/*FILTERS*/
@@ -353,15 +358,17 @@ main{
 		
 /*EVENTS*/
 		.eventSection{
-			width: 50%;
-			min-width: 450px;	
+			width: 700px;	
 			background: white;
-			border-left: 2px solid var(--bg_grey);
+			padding: 25px;
 		}
 		
 	.listEvent{
 		color: var(--color_grey);
 		font-size: 14px;
+	}
+	.dataEvent{
+		width: 100%;
 	}
 	.eventContent{
 		display: flex;
@@ -379,7 +386,9 @@ main{
 		color:var(--color_red);
 		font-weight: bold;
 	}
-	.dateLocationEvent{
+	.dateLocationEvent,
+	.nameEvent,
+	.orgEvent{
 		display: flex;
 		justify-content: space-between;
 	}
@@ -395,39 +404,40 @@ main{
 	}
 	.orgEvent{
 		color: var(--color_grey);
+		text-align: justify;
+		line-height: 15px;
 	}
-	
+	.imgEvent{
+		margin: 0 15px 0 0 ;
+		
+	}
 
 	/*NEWS*/
-		.newsSection{
-			width: 26%;
-			min-width: 250px;	
-			background: white;
-			border-left: 2px solid var(--bg_grey);
+		.otherChapters{
+			width: 300px;
+			background: #fff;
+			padding: 25px;
+			margin-left: 60px;
 		}
-		
-		.mostAwaitedEvent{
+		.titleotherChapters{
 			margin-top: 20px;
 			display: flex;
 			justify-content: space-between;
 		}
-		.mostAwaitedEvent strong{
+		.titleotherChapters strong{
 			font-size: 1.3em;
 			font-weight: normal;
 			color:var(--color_grey);
 			padding: 10px;
 			letter-spacing: 1px;
 		}
-		.newsSection .item{
-			height: 50px;
+		.otherChapters .item{
+			height: 30px;
+			font-size: .85em;
+			color: var(--color_grey);
+			text-decoration-line: underline;
 		}
-		.newsSection .item:nth-child(2n){
-			height: 50px;
-			margin: 0 5px;
-			background: var(--bg_grey);
-			border-bottom: 1px solid var(--line_grey);
-		}
-		
+	
 
 /*SPONSORS*/
 		.sponsorsLogoMob{
