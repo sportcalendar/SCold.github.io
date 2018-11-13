@@ -217,14 +217,7 @@ footer{
 
 /*---DESKTOP---*/
 @media (min-width: 1300px) and (max-width: 1450px){
-	
-	.container{
-		
-	}
-	/* .mainSponsorPicture{
-		opacity: .8;
-		display: none;
-	} */
+
 /*HEADER*/
 		.headerMob{
 			display: none;
@@ -241,6 +234,7 @@ footer{
 			width: 60px;
 			display: flex;
 			justify-content: center;
+			margin-left: 60px;
 		}
 		.menuContent{
 			margin-left: 25px;
@@ -252,9 +246,7 @@ footer{
 		.headerMenu,
 		.headerSocialMenu{
 			display: flex;
-			
 		}
-	 	
 		.headerMenu a,
 		.headerMenu a:visited,
 		.headerMenu a:active{
@@ -269,8 +261,8 @@ footer{
 			font-size: 1.1em;
 		}
 		.header li{
-			margin-right: 30px;
-			font-size: 14px;
+			margin-right: 40px;
+			font-size: 15px;
 			font-weight: bold;
 			letter-spacing: 1px;
 		}
@@ -279,13 +271,9 @@ footer{
 		}
 		.headerMenu .calendar{
 			color: var(--color_red);
-			border-bottom: 3px solid var(--color_red);
 			font-size: 1.1em;
 		}
-		a:focus,
-		a:hover{
-			border-bottom: 2px solid var(--color_red);
-		}
+		
 		.logo:focus,
 		.logo:hover{
 			border: none;
@@ -324,26 +312,26 @@ footer{
 			font-size: 1.7em;
 			font-weight: normal;
 			color:var(--color_grey);
-			padding: 15px 0;
+			padding: 0 0 20px 0;
 			letter-spacing: 1px;
 		}
 	/*FILTERS*/
 		.filterMenu{
 			display: flex;
-			justify-content: flex-start;
+			justify-content: space-between;
 			align-items: center;
 			color: var(--main-color);
 			height: 50px;
 		}
 		.filterItem{
-			width: 145px;
+			width: 165px;
 		}
 		select{
 			color: var(--color_black);
 			font-weight: bolder;
 			text-transform: uppercase;
 			height: 30px;
-			width: 135px;
+			width: 100%;
 			border: 1px solid var(--color_grey);
 		}
 		select:focus,
@@ -373,12 +361,20 @@ footer{
 	.eventContent{
 		display: flex;
 		align-items: center;
-		height: 100px;
-		line-height: 22px;
+		height: 120px;
+		line-height: 28px;
+		padding: 10px 0;
+
 	}
 	.nameEvent{
 		text-transform: uppercase;
 		font-size: 17px;
+	}
+	.nameEvent a{
+		border-bottom: none;
+	}
+	.eventContent img{
+		width: 100px;
 	}
 	.nameEvent a,
 	.nameEvent a:visited,
@@ -416,23 +412,22 @@ footer{
 		.otherChapters{
 			width: 300px;
 			background: #fff;
-			padding: 25px;
 			margin-left: 60px;
 		}
 		.titleotherChapters{
-			margin-top: 20px;
 			display: flex;
 			justify-content: space-between;
+			padding: 25px;
 		}
 		.titleotherChapters strong{
-			font-size: 1.3em;
+			font-size: 1.7em;
 			font-weight: normal;
 			color:var(--color_grey);
-			padding: 10px;
 			letter-spacing: 1px;
 		}
 		.otherChapters .item{
 			height: 30px;
+			padding: 0 25px ;
 			font-size: .85em;
 			color: var(--color_grey);
 			text-decoration-line: underline;
