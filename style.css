@@ -120,6 +120,7 @@ body{
 	display: table;
 	line-height: 26px;	
 	border-bottom: 3px solid var(--color_red);
+	color: var(--color_red);
 }
 /*--CONTENT--*/
  
@@ -285,37 +286,29 @@ footer{
 		margin: 60px;
 		display: flex;
 	}
-		.month{
-			text-transform: uppercase;
-			font-size: 1.1em;
-			height: 40px;
-			margin-top: 10px;
-		}
-		.month p{
-			display: table;
-			line-height: 26px;	
-			color: var(--color_grey);
-			border-bottom: 3px solid var(--color_red);
-		}
-		.mobOrgEvent{
-			display: none;
-		}
+		
 /*PAGE NAME*/
+.headerEventPage{
+	display: flex;
+	justify-content: space-between;
+	color:var(--color_grey);
+	padding: 0 0 20px 0;
+}
+
 		.pageNameMob{
 			display: none;
-			}
-		.pageNameDesktop{
-			display: flex;
-			justify-content: space-between;
 		}
 		.pageNameDesktop strong{
 			font-size: 1.7em;
 			font-weight: normal;
-			color:var(--color_grey);
-			padding: 0 0 20px 0;
 			letter-spacing: 1px;
 		}
-	/*FILTERS*/
+		.viweEvents{
+			font-weight: normal;
+			font-size: .8em;
+		}
+
+/*FILTERS*/
 		.filterMenu{
 			display: flex;
 			justify-content: space-between;
@@ -342,8 +335,23 @@ footer{
 		.filterMenu .sportName {
 			color: var(--color_black);
 		}
-	
-		
+
+/*MONTH*/
+		.month{
+			text-transform: uppercase;
+			font-size: 1.1em;
+			height: 40px;
+			margin-top: 10px;
+		}
+		.month p{
+			display: table;
+			line-height: 26px;	
+			color: var(--color_red);
+			border-bottom: 3px solid var(--color_red);
+		}
+		.mobOrgEvent{
+			display: none;
+		}
 /*EVENTS*/
 		.eventSection{
 			width: 700px;	
@@ -361,20 +369,16 @@ footer{
 	.eventContent{
 		display: flex;
 		align-items: center;
-		height: 120px;
+		height: 170px;
 		line-height: 28px;
-		padding: 10px 0;
-
-	}
-	.nameEvent{
-		text-transform: uppercase;
-		font-size: 17px;
 	}
 	.nameEvent a{
+		font-size: 17px;
 		border-bottom: none;
 	}
 	.eventContent img{
-		width: 100px;
+		width: 130px;
+		height: 130px;
 	}
 	.nameEvent a,
 	.nameEvent a:visited,
@@ -404,7 +408,7 @@ footer{
 		line-height: 15px;
 	}
 	.imgEvent{
-		margin: 0 15px 0 0 ;
+		margin: 0 25px 0 0 ;
 		
 	}
 
