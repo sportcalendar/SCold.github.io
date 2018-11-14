@@ -61,10 +61,11 @@ body{
 		color: var(--color_grey);
 	}
 	select{
-		font-size: 1.05em;
+		font-size: 14px;
 		text-transform: uppercase;
 		width: 100%;
 		color: var(--main-color);
+		background: #fff;
 		font-weight: 700;
 	}
 .mainPicDesctop{
