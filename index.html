@@ -37,66 +37,79 @@
     </header>
  
     <header class="headerMob">
-        
-        <a href="#" class="logo">
-            <img src="img/logo_red.png"  alt="">
-        </a>
+        <div class="headerTop">
+            <section class="logo">
+                <a href="#">
+                    <img src="img/logo_red.png"  alt="">
+                </a>
+            </section>
+            <section>=</section>
+        </div>
+
+        <div class="headerBottom">
+            <section>
+            <!-- FILTERS -->
+            <div class="filterMenuMob">
+                    <div class="dateEventFilter filterItem">
+                        <!-- <label for="">Місяць</label><br> -->
+                        <select>
+                            <option selected>Дата</option>
+                            <option class="sportName">Квітень</option>
+                            <option class="sportName">Травень</option>
+                            <option class="sportName">Грудень</option>
+                            <option class="sportName">Січень</option>
+                        </select>
+                    </div>        
+    
+                    <div class="CategoryFilter filterItem">
+                        <!-- <label for="">Спорт</label><br> -->
+                        <select>
+                            <option selected>Види спорту</option>
+                            <option class="sportName">Вейкбордінг</option>
+                            <option class="sportName">САПбордінг</option>
+                            <option class="sportName">Кайтсьорфінг</option>
+                            <option class="sportName">Віндсьорфінг</option>
+                        </select>
+                    </div>
+                    <div class="locEventFilter filterItem">
+                        <!-- <label for="">Локація</label> <br> -->
+                        <select>
+                            <option selected>Місто</option>
+                            <option class="sportName">Дніпро</option>
+                            <option class="sportName">Вінниця</option>
+                            <option class="sportName">Харків</option>
+                            <option class="sportName">Черкаси</option>
+                        </select>
+                    </div>
+                    
+                    
+                </div> 
+                <!-- FILTERS end-->
+            </section>
+            
+        </div>              
 
     </header> 
 
-    <section class="mainSponsorPicture">
+    
+    <section class="mainPicDesctop">
         <img src="img/ad_header_text2.jpg" alt="">
     </section>
 
+
     <main>
-    <!-- SPONSOR SECTION -->
-        <!-- <section class="sponsorsSection">
-            
-                <div class="titleSponsor">
-                    <strong>Спонсори</strong>
-                </div>
-         
-            <div class="sponsorItem rapid">
-                <a href="http://rapid.net.ua/">
-                    <img src="img/sponsors/rapid.png" alt="">                    
-                </a>
-            </div>
-            <div class="sponsorItem borika">
-                <a href="http://borika.ua/">
-                    <img src="img/sponsors/borika.png" alt="">
-                </a>
-            </div>        
-            
-            <div class="sponsorItem neris">
-                <a href="http://www.neris.ua/">
-                    <img src="img/sponsors/neris.png" alt="">                    
-                </a>
-            </div>     
-            <div class="sponsorItem kolibri">
-                <a href="http://www.kolibriboats.com/">
-                    <img src="img/sponsors/kolibri.png" alt="">                    
-                </a>
-            </div>
-            <div class="sponsorItem ordana">
-                <a href="http://www.ordana.com/?l=ua">
-                    <img src="img/sponsors/ordana.png" alt="">
-                    
-                </a>
-            </div>
-        </section>   -->
-    <!--end SPONSOR SECTION -->
 
     <!--EVENT SECTION-->
         <section class="eventSection">
                
-        <section class="headerEventPage">
-            <div class="pageNameDesktop">
-                <strong>Календар подій</strong> 
-            </div>
-            <div class="viweEvents">
-                <strong >Стрічка =  Сітка =</strong>
-            </div>
-        </section>
+            <section class="headerEventPage">
+                <div class="pageName">
+                    <strong>Календар подій</strong> 
+                </div>
+                <div class="viweEvents">
+                    <strong >Стрічка =  Сітка =</strong>
+                </div>
+            </section>
             
             <!-- FILTERS -->
             <div class="filterMenu">
@@ -141,29 +154,34 @@
             <p>Квітень</p>
         </div>    
 
-            <!--LIST EVENT-->
-                <div class="listEvent">                   
+    <!--LIST EVENT-->
+        <div class="listEvent">                   
                             
-                    <!--Фест водного спорту-->
-                    <div class="eventContent FestVodnyiSports">
-                        <section class="imgEvent">
-                            <img src="img/previewEvent/canoepolo_preview.jpg" alt="">
-                        </section>
-                        <section class="dataEvent">
-                            <div class="dateLocationEvent eventCell"> 
-                                <strong class="dateEvent eventCell">15/06 - 16/06</strong>
-                                <strong class="locEvent eventCell">Київ</strong>
-                            </div>
-                            <div class="nameEvent eventCell">
-                                <a href="https://eventpage.github.io/" target="_blank">
-                                    КАНУПОЛО. Перший етап кубку України </a>
-                            </div>
-                            <div class="infoEvent">Поло на байдарках. Міжіжнародні командні змагання каякерів </div>
-                            <div class="orgEvent eventCell">Федерація КАНУПОЛО України</div>
+            <!--Фест водного спорту-->
+            <div class="eventContent FestVodnyiSports">
+                
+                <section class="imgEvent">
+                    <img src="img/previewEvent/canoepolo_preview.jpg" alt="">
+                </section>
+
+                <section class="dataEvent">
+
+                    <div class="dateLocationEvent eventCell"> 
+                        <strong class="dateEvent eventCell">15/06 - 16/06</strong>
+                        <strong class="locEvent eventCell">Київ</strong>
+                    </div>
+
+                    <div class="nameEvent eventCell">
+                        <a href="https://eventpage.github.io/" target="_blank">
+                        <p>КАНУПОЛО. Перший етап кубку України </p>  </a>
+                    </div>
+
+                    <div class="infoEvent">Поло на байдарках. Міжіжнародні командні змагання каякерів </div>
+                    <div class="orgEvent eventCell">Федерація КАНУПОЛО України</div>
                             
-                        </section>
-                    </div><!--Фест водного спорту end-->
-                    <hr>
+                </section>
+            </div><!--Фест водного спорту end-->
+            <hr>
 
                     <div class="eventContent FestVodnyiSports">
                         <section class="imgEvent">
@@ -240,8 +258,8 @@
                     </div><!--Фест водного спорту end-->           
                         
                         
-                </div> 
-            <!--LIST EVENT end-->
+        </div> 
+    <!--LIST EVENT end-->
 
                 
             
